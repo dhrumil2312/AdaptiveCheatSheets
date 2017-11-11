@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href= "{% static  "style.css" %}" >
+</head>
+<body>
+
+<div id="main" class='container' >
+    <h1> Adaptive Cheat Sheets </h1>
+    <h2>Login Form</h2>
+    <form action="" method="POST">
+       <div class="form_group">
+
+           <label> Username </label>
+            <input id="name" name="username" placeholder="Username" type="text" align="center" class="form-control"><br>
+
+
+            <label> Password </label>
+            <input id="password" name="password" placeholder="Password" type="password" align="center" class="form-control" ><br>
+
+
+
+        <input name="submit" type="submit" value=" Login " align="center" class="btn btn-default"><br><br><br>
+
+        <a href="/register/" class=""> Register </a>
+       </div>
+    </form>
+
+</div><br><br><br><br><br><br><br><br><br>
+
+<nav class="navbar navbar-inverse navbar-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"> Adaptive Cheat Sheets </a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/contact_us"> Contact Us</a></li>
+      </ul>
+  </div>
+</nav>
+
+
+</body>
+</html>
