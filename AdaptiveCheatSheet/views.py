@@ -33,7 +33,7 @@ def login(request):
             if User.objects.all().filter(username = user_enter.username) :
                 request.session['username']= user_enter.username
                 username = request.session['username']
-                temp  = loader.get_template('user.html')
+                temp  = loader.get_template('index.html')
                 context = {
                        'Username' : username
                 }
