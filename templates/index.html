@@ -53,22 +53,23 @@
         <!-- success msg -->
         <p class="success" id="success">Sticky note saved</p>
 
-        <!-- character count -->
-        <p class="noteCharCount" ng-model="noteMessage"><span>Characters Remaining: <strong>{{140 - noteMessage.length}}</strong></span></p>
-
-        <!-- close icon -->
-        <p class="closeFormIcon"><a id="closeIcon" ng-click="closeAddNoteForm()"><span class="icon-cancel"></span></a></p>
+        <!-- title textbox -->
+        <div class="control-group">
+          <label class="control-label" for="noteTitle">Title</label>
+          <div class="controls"><input type="text" id="noteTitle" ng-model="noteTitle" placeholder="Title"/></div>
+        </div>
 
         <!-- note body textarea -->
         <div class="control-group">
           <label class="control-label" for="noteMessage">Note</label>
-          <div class="controls"><textarea rows="5" id="noteMessage" maxlength="140" ng-model="noteMessage"></textarea></div>
+          <div class="controls"><textarea rows="5" id="noteMessage"  ng-model="noteMessage"></textarea></div>
         </div>
 
-        <!-- title textbox -->
+
+           <!-- Tag textbox -->
         <div class="control-group">
-          <label class="control-label" for="noteTitle">Title</label>
-          <div class="controls"><input type="text" id="noteTitle" ng-model="noteTitle" placeholder="Optional Title"/></div>
+          <label class="control-label" for="noteTitle">Tags</label>
+          <div class="controls"><input type="text" id="noteTags" ng-model="noteTags" placeholder="Tags"/></div>
         </div>
 
         <!-- submit button -->
