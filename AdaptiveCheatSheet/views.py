@@ -56,6 +56,9 @@ def register(request):
             user_obj.name = f.cleaned_data['name']
             user_obj.username = f.cleaned_data['username']
             user_obj.password = f.cleaned_data['password']
+            user_obj.tags = f.cleaned_data['tags']
             user_obj.save()
             return redirect('/login/')
+
+
 
