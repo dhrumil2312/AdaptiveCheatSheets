@@ -54,9 +54,22 @@ function NotesController($scope) {
     }
 
     $scope.addNote = function() {
-        var n = {"title" : $scope.noteTitle, "date" : new Date().getTime(), "msg" : $scope.noteMessage};
+        var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(), "msg" : $scope.noteMessage};
         $scope.notes.push(n);
-        localStorage.setItem('notes', JSON.stringify($scope.notes));
+
+        $http({
+            url: 'http://localhost:8080/' + username + '/notes/',
+            dataType: 'json',
+            method: 'POST',
+            data: noteData,
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).success(function (response) {
+            console.log(response);
+        });
+
+        // localStorage.setItem('notes', JSON.stringify($scope.notes));
         notesContainer.sortable('refresh');
         $scope.noteMessage = '';
         $scope.noteTitle   = '';
