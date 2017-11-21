@@ -12,6 +12,7 @@ from django.views.generic.base import RedirectView
 
 def save_note(request):
     print(request.method)
+    print(request.POST)
     return 0
 
 def favicon_view(request):
