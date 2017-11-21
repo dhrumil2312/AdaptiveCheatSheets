@@ -4,14 +4,13 @@ from AdaptiveCheatSheet.models import *
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.template import loader
-from bokeh.models import FactorRange , ColumnDataSource
-from bokeh.models.widgets import RadioButtonGroup
-from bokeh.models import CustomJS
-from bokeh.plotting import figure, show, output_file ,save
-from bokeh.embed import file_html , components
 import datetime
 from django.db.models import *
 from django.db import connection
+from django.views.generic.base import RedirectView
+
+def favicon_view(request):
+    RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 
 def contact_us(request):

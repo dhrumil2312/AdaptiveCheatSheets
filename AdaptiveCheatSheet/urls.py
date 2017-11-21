@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^contact_us/', views.contact_us),
     url(r'^logout/', views.login),
     url(r'^register/', views.register),
+    url(r'^favicon\.ico$', views.favicon_view),
     url(r'^login/', views.login),
 ]
