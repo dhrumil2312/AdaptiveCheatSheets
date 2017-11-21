@@ -17,7 +17,7 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function() {
     };
 });
 
-function NotesController($scope) {
+function NotesController($scope , $http) {
     var notesContainer;
 
     $scope.notes        = JSON.parse(localStorage.getItem('notes'));
@@ -56,9 +56,9 @@ function NotesController($scope) {
     $scope.addNote = function() {
         var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(), "msg" : $scope.noteMessage};
         $scope.notes.push(n);
-
+        var username = 'aaa';
         $http({
-            url: 'http://localhost:8080/' + username + '/notes/',
+            url: '/addnotes/' + username,
             dataType: 'json',
             method: 'POST',
             data: noteData,

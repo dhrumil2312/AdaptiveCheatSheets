@@ -9,6 +9,11 @@ from django.db.models import *
 from django.db import connection
 from django.views.generic.base import RedirectView
 
+
+def save_note(request):
+    print(request.method)
+    return 0
+
 def favicon_view(request):
     RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
