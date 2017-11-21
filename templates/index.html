@@ -7,32 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link rel="shortcut icon" href=favicon.ico"  type="image/x-icon" />
-    <link rel="icon" href= "favicon.ico"  type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %} "  type="image/x-icon" />
+    <link rel="icon" href= "{% static  'favicon.ico' %}"type="image/x-icon" />
 
     <title>Sticky Notes</title>
 
     <!-- scripts -->
-    <script src="{%static "jquery.min.js"%}"></script>
-    <script src="{%static "jquery-ui.min.js"%}"></script>
-    <script src="{%static "angular.min.js" %}"></script>
-    <script src="{%static "controllers.js" %}"></script>
-    <script src="{%static "effects.js" %}"></script>
+    <script src="{%static 'jquery.min.js'%}"></script>
+    <script src="{%static 'jquery-ui.min.js'%}"></script>
+    <script src="{%static 'angular.min.js' %}"></script>
+    <script src="{%static 'controllers.js' %}"></script>
+    <script src="{%static 'effects.js' %}"></script>
 
     <!-- styles -->
-    <link rel="stylesheet" href="{%static "reset.css" %}" />
-    <link rel="stylesheet" href="{%static "bootstrap.min.css" %}" />
-    <link rel="stylesheet" href="{%static "stickys.css" %}" />
+    <link rel="stylesheet" href="{%static 'reset.css' %}" />
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{%static 'stickys.css' %}" />
   </head>
 
   <body ng-controller="NotesController">
 
     <!-- Navigation, User Control Panel -->
     <nav>
-      <li class="tooltip" data-tip="New Sticky Note" accesskey="n" ng-click="showAddNoteForm()"><a class="icon icon-new" ng-click="showAddNoteForm()"></a></li>
-      <li class="tooltip" data-tip="Help" accesskey="h" ng-click="toggleHelp()"><a class="icon icon-help" ng-click="toggleHelp()"></a></li>
-      <li class="tooltip" data-tip="About" accesskey="a" ng-click="showAboutDialog()"><a class="icon icon-about" ng-click="showAboutDialog()"></a></li>
-      <li class="tooltip" id="trashBin" data-tip="Recycle Bin" accesskey="r" ng-click="toggleRecycleBin()"><a class="icon icon-trash" ng-click="toggleRecycleBin()"><span class="recycleCount" ng-model="recycle">{{recycle.length}}</span></a></li>
+      <li class="tooltip" data-tip="New Sticky Note" accesskey="n" ng-click="showAddNoteForm()">
+          <a class="icon icon-new" ng-click="showAddNoteForm()"></a></li>
+      <li class="tooltip" data-tip="Help" accesskey="h" ng-click="toggleHelp()">
+          <a class="icon icon-help" ng-click="toggleHelp()"></a></li>
+      <li class="tooltip" data-tip="About" accesskey="a" ng-click="showAboutDialog()">
+          <a class="icon icon-about" ng-click="showAboutDialog()"></a></li>
+      <li class="tooltip" id="trashBin" data-tip="Recycle Bin" accesskey="r" ng-click="toggleRecycleBin()">
+          <a class="icon icon-trash" ng-click="toggleRecycleBin()">
+              <span class="recycleCount" ng-model="recycle">{{recycle.length}}</span></a></li>
     </nav>
 
     <!-- the notes -->
@@ -208,7 +213,7 @@
 
     <!-- About Project-->
     <div class="aboutWindow" id="aboutWindow" title="About Sticky Notes">
-      <p class="closeDialogWrapper"><a ng-click="closeAboutDialog()""><span class="icon-cancel"></span></a></p>
+      <p class="closeDialogWrapper"><a ng-click="closeAboutDialog()"><span class="icon-cancel"></span></a></p>
 
       <article>
         <header>

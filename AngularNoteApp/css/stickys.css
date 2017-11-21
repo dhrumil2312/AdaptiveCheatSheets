@@ -39,33 +39,33 @@
  */
 @font-face {
   font-family: 'DroidSansRegular';
-  src: url('../fonts/DroidSans-webfont.eot');
-  src: url('../fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/DroidSans-webfont.woff') format('woff'),
-       url('../fonts/DroidSans-webfont.ttf') format('truetype'),
-       url('../fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+  src: url('../../static/fonts/DroidSans-webfont.eot');
+  src: url('../../static/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../static/fonts/DroidSans-webfont.woff') format('woff'),
+       url('../../static/fonts/DroidSans-webfont.ttf') format('truetype'),
+       url('../../static/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CrimsonRoman';
-  src: url('../fonts/Crimson-Roman-webfont.eot');
-  src: url('../fonts/Crimson-Roman-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Crimson-Roman-webfont.woff') format('woff'),
-       url('../fonts/Crimson-Roman-webfont.ttf') format('truetype'),
-       url('../fonts/Crimson-Roman-webfont.svg#CrimsonRoman') format('svg');
+  src: url('../../static/fonts/Crimson-Roman-webfont.eot');
+  src: url('../../static/fonts/Crimson-Roman-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../static/fonts/Crimson-Roman-webfont.woff') format('woff'),
+       url('../../static/fonts/Crimson-Roman-webfont.ttf') format('truetype'),
+       url('../../static/fonts/Crimson-Roman-webfont.svg#CrimsonRoman') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'BloklettersBalpen';
-  src: url('../fonts/Blokletters-Balpen-webfont.eot');
-  src: url('../fonts/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Blokletters-Balpen-webfont.woff') format('woff'),
-       url('../fonts/Blokletters-Balpen-webfont.ttf') format('truetype'),
-       url('../fonts/Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
+  src: url('../../static/fonts/Blokletters-Balpen-webfont.eot');
+  src: url('../../static/fonts/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../static/fonts/Blokletters-Balpen-webfont.woff') format('woff'),
+       url('../../static/fonts/Blokletters-Balpen-webfont.ttf') format('truetype'),
+       url('../../static/fonts/Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -79,7 +79,7 @@ html {font-size: 100%;}   /* remove this once media queries are active */
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../img/corkboard.jpg");
+  background-image: url("../../static/img/corkboard.jpg");
   font-size: 100%;
   line-height: 1.61803398875em;
   font-family: DroidSansRegular;
@@ -103,11 +103,11 @@ strong {font-weight: bold;}
  */
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot');
-  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.svg#icomoon') format('svg'),
-      url('../fonts/icomoon.woff') format('woff'),
-      url('../fonts/icomoon.ttf') format('truetype');
+  src:url('../../static/fonts/icomoon.eot');
+  src:url('../../static/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+      url('../../static/fonts/icomoon.svg#icomoon') format('svg'),
+      url('../../static/fonts/icomoon.woff') format('woff'),
+      url('../../static/fonts/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -386,7 +386,7 @@ form p.success {
   color: #264409;
   background-repeat: no-repeat;
   background-position: 1em 0;
-  background-image: url(../img/checkmark.png);
+  background-image: url(../../static/img/checkmark.png);
   padding: 0.25em 0 0.15em 3.5em;
   opacity: 0;
 
@@ -468,7 +468,7 @@ div.recycleBin h1 {
   margin: 0;
   padding: 0 0 0 3em;
   color: #DFDBD2;
-  background-image: url("../img/recycle-earth.png");
+  background-image: url("../../static/img/recycle-earth.png");
   background-repeat: no-repeat;
   background-position: 0.5em center;
 }
@@ -566,7 +566,7 @@ div.help h1 {
   margin: 0 0 1em 0;
   padding: 0 0 0 3em;
   color: #DFDBD2;
-  background-image: url("../img/help.png");
+  background-image: url("../../static/img/help.png");
   background-repeat: no-repeat;
   background-position: 0.5em center;
 }
