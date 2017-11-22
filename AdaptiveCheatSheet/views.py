@@ -76,10 +76,9 @@ def login(request):
                 request.session['username']= user_enter.username
                 username = request.session['username']
                 temp  = loader.get_template('index.html')
-                all_notes = get_notes(username)
+
                 context = {
                        'Username' : username,
-                        'notes' : all_notes
                 }
                 # ----------------------------Context Created-----------------------------#
                 return HttpResponse(temp.render(context , request))

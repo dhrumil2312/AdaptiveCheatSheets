@@ -22,14 +22,14 @@ function NotesController($scope, $http) {
     var notesContainer;
 
     $http({
-            url: '/getNotes/',
+            url: '/getnotes/',
             method: 'GET'
         }).success(function (response) {
             console.log(response);
         });
 
 
-alert("getting all notes")
+alert("getting all notes");
 
     $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
