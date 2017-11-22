@@ -20,9 +20,14 @@ def get_notes(request):
     rows = cursor.fetchall()
     id = rows[0][0]
     print(id , username)
-    a = Notes.objects.all().filter(author_id = id)
-    print(a.count())
-    return render(request ,'index.html' , {'notes' : a})
+
+    all_note_obj = Notes.objects.all().filter(author_id = id)
+    print(all_note_obj)
+    context = {
+        'all_note_obj': all_note_obj,
+        'Username': username,
+    }
+    return HttpResponse(context,content_type="application/json")
 
 
 def save_note(request):
