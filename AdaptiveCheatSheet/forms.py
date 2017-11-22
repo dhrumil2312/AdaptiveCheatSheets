@@ -13,5 +13,5 @@ class LoginForm(forms.Form):
 
 class NotesForm(forms.Form):
     title = forms.CharField(max_length=1000)
-    content = forms.CharField(max_length=5000)
     tags = forms.CharField(max_length=1000)
+    content = forms.CharField(max_length=5000)

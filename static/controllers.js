@@ -62,7 +62,7 @@ function NotesController($scope, $http) {
 
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
-        var noteData = {"title": $scope.noteTitle, "tags": $scope.noteTags, "content": $scope.noteMessage};
+        var noteData = {title: $scope.noteTitle, tags: $scope.noteTags, content: $scope.noteMessage};
         $scope.notes.push(n);
         console.log("notedata is : ", noteData);
         $http({

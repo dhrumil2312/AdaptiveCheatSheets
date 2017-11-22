@@ -8,16 +8,43 @@ import datetime
 from django.db.models import *
 from django.db import connection
 from django.views.generic.base import RedirectView
-
+import  json
+from django.db import  connection
 
 def save_note(request):
     print(request.method)
     print(request.POST)
     username = request.session['username']
     print(username)
-    n = NotesForm()
-    if n.is_valid():
-        print('True')
+    data = json.loads(request.body)
+    print(data)
+    print(data['tags'] , '-------------------')
+    #n = NotesForm(data)
+    #print(request.body)
+    #print(n)
+    #print(n.is_valid())
+    #if n.is_valid():
+    print('True')
+    note_obj = Notes()
+    note_obj.content = data['content']
+    note_obj.title = data['title']
+    note_obj.tag = data['tags']
+    note_obj.upvote = 0
+    note_obj.downvote = 0
+    note_obj.view_count = 0
+    cursor = connection.cursor()
+    a = "select 1 as id , max(id) max_id from \"AdaptiveCheatSheet_notes\""
+    _ = cursor.execute(a)
+    rows = cursor.fetchall()
+    #print(rows[0][1]+1)
+    note_obj.note_id = rows[0][1]+1
+    a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
+    _ = cursor.execute(a)
+    rows = cursor.fetchall()
+    #print(rows[0][0])
+    note_obj.author_id = rows[0][0]
+    note_obj.type = 1
+    note_obj.save()
     return 0
 
 def favicon_view(request):
@@ -37,6 +64,7 @@ def login(request):
         return render(request,'login.html',{})
     elif request.method =='POST':
         f = LoginForm(request.POST)
+        print(request.POST)
         user_enter = LoginForm()
         if f.is_valid():
             user_enter.username = f.cleaned_data['username']
