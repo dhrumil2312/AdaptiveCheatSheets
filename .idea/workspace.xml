@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5c16594-9ad1-4136-a2d1-40a771f995a1" name="Default" comment="">
+    <list default="true" id="d5c16594-9ad1-4136-a2d1-40a771f995a1" name="Default" comment="Today changes">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" afterPath="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" afterPath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/controllers.js" afterPath="$PROJECT_DIR$/static/controllers.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+            <state relative-caret-position="170">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,13 +65,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1511391552990" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
-                <marker date="1511391552990" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
-                <marker date="1511391552990" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511392332715" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511392332715" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
+                <marker date="1511392332715" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
               </folding>
             </state>
           </provider>
@@ -144,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -191,11 +191,11 @@
         <option value="$PROJECT_DIR$/static/app-rest.js" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/settings.py" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/models.py" />
-        <option value="$PROJECT_DIR$/static/controllers.js" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/forms.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/da16117a-c9d7-4715-afb5-6566ab82de5d/console.sql" />
-        <option value="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
+        <option value="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
+        <option value="$PROJECT_DIR$/static/controllers.js" />
       </list>
     </option>
   </component>
@@ -422,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511391062236</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Today changes">
+      <created>1511391569410</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511391569410</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -440,10 +447,10 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@AdaptiveCheatSheet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48487142" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5544629" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4742814" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5574887" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.47125566" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.44553706" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.44251135" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48487142" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41734862" sideWeight="0.48487142" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -494,7 +501,8 @@
     <MESSAGE value="2 push try" />
     <MESSAGE value="&#10;2 try" />
     <MESSAGE value="&#10;Today change" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Today change" />
+    <MESSAGE value="Today changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Today changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -816,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -854,23 +854,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1511391552990" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
-            <marker date="1511391552990" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
-            <marker date="1511391552990" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1511392332715" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+            <marker date="1511392332715" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
+            <marker date="1511392332715" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
