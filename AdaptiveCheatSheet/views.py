@@ -79,7 +79,7 @@ def login(request):
                        'Username' : username,
                         'notes' : all_notes
                 }
-                get_notes(username)
+
                 # ----------------------------Context Created-----------------------------#
                 return HttpResponse(temp.render(context , request))
             else:
