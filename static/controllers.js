@@ -17,6 +17,7 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function() {
     };
 });
 
+
 function NotesController($scope , $http) {
     var notesContainer;
 
@@ -56,14 +57,15 @@ function NotesController($scope , $http) {
     $scope.addNote = function() {
         var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(), "msg" : $scope.noteMessage};
         $scope.notes.push(n);
+        console.log("notedata is : ",noteData);
         var username = 'aaa';
         $http({
             url: '/addnotes/' + username,
-            dataType: 'json',
+            dataType: 'jsonp',
             method: 'POST',
             data: noteData,
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/x-www-form-urlencoded"
             }
         }).success(function (response) {
             console.log(response);
