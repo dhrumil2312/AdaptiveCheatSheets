@@ -13,6 +13,8 @@ from django.views.generic.base import RedirectView
 def save_note(request):
     print(request.method)
     print(request.POST)
+    username = request.session['username']
+    print(username)
     return 0
 
 def favicon_view(request):
