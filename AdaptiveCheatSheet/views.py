@@ -19,8 +19,9 @@ def get_notes(request):
     _ = cursor.execute(a)
     rows = cursor.fetchall()
     id = rows[0][0]
+    print(id , username)
     a = Notes.objects.all().filter(author_id = id)
-    print(a)
+    print(a.count())
     return render(request ,'index.html' , {'notes' : a})
 
 
