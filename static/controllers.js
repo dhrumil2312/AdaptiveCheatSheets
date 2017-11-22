@@ -21,6 +21,16 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
 function NotesController($scope, $http) {
     var notesContainer;
 
+    $http({
+            url: '/getNotes/',
+            method: 'GET'
+        }).success(function (response) {
+            console.log(response);
+        });
+
+
+alert("getting all notes")
+
     $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
@@ -28,7 +38,6 @@ function NotesController($scope, $http) {
     $scope.noteTitle = '';
     $scope.noteId = 0;
     $scope.submitButton = 'Add';
-
     $scope.rbOrder = 'date';
     $scope.rbSelectBtn = "Select All";
     $scope.rbSelect = true;
@@ -59,7 +68,6 @@ function NotesController($scope, $http) {
         }
     }
 
-
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
         var noteObject = new Object();
@@ -72,17 +80,13 @@ function NotesController($scope, $http) {
         console.log("notedata is : ", noteData);
         $http({
             url: '/addnotes/',
-            // dataType: 'jsonp',
             method: 'POST',
             data: noteObject
-            // headers: {
-            //     "Content-Type": "application/x-www-form-urlencoded"
-            // }
         }).success(function (response) {
             console.log(response);
         });
 
-        // localStorage.setItem('notes', JSON.stringify($scope.notes));
+        localStorage.setItem('notes', JSON.stringify($scope.notes));
         notesContainer.sortable('refresh');
         $scope.noteMessage = '';
         $scope.noteTitle = '';
@@ -239,19 +243,6 @@ function NotesController($scope, $http) {
         start: $scope.dragStart,
         update: $scope.dragEnd
     });
-
-    /*
-     * a watch for development, comment out prior to production
-     */
-    /*
-    $scope.$watch("notes", function(value) {
-        console.log("Notes: " + value.map(function(e){return e.title}).join(','));
-    },true);
-    */
-
-    /*
-     * Animations & Interactions
-     */
 
     $scope.showAddNoteForm = function () {
         $scope.noteMessage = '';
