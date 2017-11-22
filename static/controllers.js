@@ -58,9 +58,8 @@ function NotesController($scope , $http) {
         var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(),"tags":$scope.noteTags, "content" : $scope.noteMessage};
         $scope.notes.push(n);
         console.log("notedata is : ",noteData);
-        var username = 'aaa';
         $http({
-            url: '/addnotes/' + username,
+            url: '/addnotes/' ,
             dataType: 'jsonp',
             method: 'POST',
             data: noteData,
