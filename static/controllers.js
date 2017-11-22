@@ -22,11 +22,11 @@ function NotesController($scope, $http) {
 
     //Initi of all notes when login is done !!
 
-    $scope.initForActivity = function () {
+    // $scope.initForActivity = function () {
 
         //Get all notes for user
         var userNotes = [];
-        $http({
+        $http({git pull
             url: '/getnotes/',
             method: 'GET'
 
@@ -38,11 +38,9 @@ function NotesController($scope, $http) {
                 $scope.notes.push(userNotes[i]);
 
         });
-
-
         alert("getting all notes");
 
-    }
+    // };
 
     var notesContainer;
 
