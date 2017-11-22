@@ -24,6 +24,7 @@ function NotesController($scope, $http) {
     $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
+    $scope.noteTags = '';
     $scope.noteTitle = '';
     $scope.noteId = 0;
     $scope.submitButton = 'Add';
@@ -83,7 +84,7 @@ function NotesController($scope, $http) {
         this.flashSuccessSave();
     }
 
-    $scope.editNote = function () {
+        $scope.editNote = function () {
         var len = $scope.notes.length;
 
         for (var i = 0; i < len; i++) {
