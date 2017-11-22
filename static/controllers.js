@@ -26,7 +26,7 @@ function NotesController($scope, $http) {
 
         //Get all notes for user
         var userNotes = [];
-        $http({git pull
+        $http({
             url: '/getnotes/',
             method: 'GET'
 
