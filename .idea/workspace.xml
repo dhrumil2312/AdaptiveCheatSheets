@@ -54,9 +54,53 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <marker date="1511393114848" expanded="true" signature="1479:1819" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="1525:1713" ph="{&quot;title&quot;: &quot;Read Help&quot;...}" />
+                <marker date="1511393114848" expanded="true" signature="1988:2112" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="2021:2061" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="2067:2106" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="2198:2972" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="2578:2677" ph="{&quot;url&quot;: '/addnotes/'...}" />
+                <marker date="1511393114848" expanded="true" signature="3008:3619" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="3088:3309" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="3145:3299" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="3659:4547" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="3834:4244" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="3957:4234" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="4684:4936" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="4973:5351" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5023:5294" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5300:5345" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5390:5627" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5667:5971" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5789:5925" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="5843:5915" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6011:6509" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6132:6234" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6166:6224" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6548:7177" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6669:6833" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6703:6761" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="6767:6823" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="7230:7499" ph="{&quot;containment&quot;: &quot;window&quot;...}" />
+                <marker date="1511393114848" expanded="true" signature="7544:7738" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="7786:8032" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8076:8215" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8259:8527" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8340:8513" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8432:8496" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8574:8861" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="8722:8823" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="9007:9450" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="9042:9329" ph="{&quot;closeText&quot;: &quot;&quot;...}" />
+                <marker date="1511393114848" expanded="true" signature="9207:9319" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="9241:9305" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="9760:9812" ph="{...}" />
+                <marker date="1511393114848" expanded="true" signature="9863:9921" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,13 +108,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+            <state relative-caret-position="242">
+              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1511393001019" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
-                <marker date="1511393001019" expanded="true" signature="1169:1234" ph="select 1 as AdaptiveCheatSheet_notes" />
-                <marker date="1511393001019" expanded="true" signature="1360:1429" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511393197513" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511393197513" expanded="true" signature="1202:1267" ph="select 1 as AdaptiveCheatSheet_notes" />
+                <marker date="1511393197513" expanded="true" signature="1393:1462" ph="select 1 as AdaptiveCheatSheet_user" />
               </folding>
             </state>
           </provider>
@@ -147,7 +191,7 @@
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -435,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511392453471</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Today changes">
+      <created>1511393102573</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511393102573</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -863,28 +914,72 @@
     <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <marker date="1511393114848" expanded="true" signature="1479:1819" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="1525:1713" ph="{&quot;title&quot;: &quot;Read Help&quot;...}" />
+            <marker date="1511393114848" expanded="true" signature="1988:2112" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="2021:2061" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="2067:2106" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="2198:2972" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="2578:2677" ph="{&quot;url&quot;: '/addnotes/'...}" />
+            <marker date="1511393114848" expanded="true" signature="3008:3619" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="3088:3309" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="3145:3299" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="3659:4547" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="3834:4244" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="3957:4234" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="4684:4936" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="4973:5351" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5023:5294" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5300:5345" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5390:5627" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5667:5971" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5789:5925" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="5843:5915" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6011:6509" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6132:6234" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6166:6224" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6548:7177" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6669:6833" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6703:6761" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="6767:6823" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="7230:7499" ph="{&quot;containment&quot;: &quot;window&quot;...}" />
+            <marker date="1511393114848" expanded="true" signature="7544:7738" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="7786:8032" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8076:8215" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8259:8527" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8340:8513" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8432:8496" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8574:8861" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="8722:8823" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="9007:9450" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="9042:9329" ph="{&quot;closeText&quot;: &quot;&quot;...}" />
+            <marker date="1511393114848" expanded="true" signature="9207:9319" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="9241:9305" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="9760:9812" ph="{...}" />
+            <marker date="1511393114848" expanded="true" signature="9863:9921" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="242">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1511393001019" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
-            <marker date="1511393001019" expanded="true" signature="1169:1234" ph="select 1 as AdaptiveCheatSheet_notes" />
-            <marker date="1511393001019" expanded="true" signature="1360:1429" ph="select 1 as AdaptiveCheatSheet_user" />
+            <marker date="1511393197513" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+            <marker date="1511393197513" expanded="true" signature="1202:1267" ph="select 1 as AdaptiveCheatSheet_notes" />
+            <marker date="1511393197513" expanded="true" signature="1393:1462" ph="select 1 as AdaptiveCheatSheet_user" />
           </folding>
         </state>
       </provider>
