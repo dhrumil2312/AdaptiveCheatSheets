@@ -19,3 +19,7 @@ class Notes(models.Model):
     title = models.CharField(max_length=5000)
     tag = models.CharField(max_length=1000)
     content = models.CharField(max_length=60000)
+    upvote = models.IntegerField()
+    downvote = models.IntegerField()
+    view_count = models.IntegerField()
+    created_date = models.DateTimeField(auto_now=True)

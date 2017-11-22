@@ -15,6 +15,9 @@ def save_note(request):
     print(request.POST)
     username = request.session['username']
     print(username)
+    n = NotesForm()
+    if n.is_valid():
+        print('True')
     return 0
 
 def favicon_view(request):
