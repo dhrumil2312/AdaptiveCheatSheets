@@ -62,17 +62,22 @@ function NotesController($scope, $http) {
 
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
-        var noteData = {title: $scope.noteTitle, tags: $scope.noteTags, content: $scope.noteMessage};
+        var noteObject = new Object();
+        noteObject.title = $scope.noteTitle;
+        noteObject.tags = $scope.noteTags;
+        noteObject.content = $scope.noteMessage;
+
+        var noteData = {"title": $scope.noteTitle, "tags": $scope.noteTags, "content": $scope.noteMessage};
         $scope.notes.push(n);
         console.log("notedata is : ", noteData);
         $http({
             url: '/addnotes/',
-            dataType: 'jsonp',
+            // dataType: 'jsonp',
             method: 'POST',
-            data: noteData,
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            }
+            data: noteObject
+            // headers: {
+            //     "Content-Type": "application/x-www-form-urlencoded"
+            // }
         }).success(function (response) {
             console.log(response);
         });
@@ -84,7 +89,7 @@ function NotesController($scope, $http) {
         this.flashSuccessSave();
     }
 
-        $scope.editNote = function () {
+    $scope.editNote = function () {
         var len = $scope.notes.length;
 
         for (var i = 0; i < len; i++) {
