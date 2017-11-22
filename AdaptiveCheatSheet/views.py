@@ -21,7 +21,7 @@ def get_notes(request):
     id = rows[0][0]
     a = Notes.objects.all().filter(author_id = id)
     print(a)
-    return a
+    return render(request ,'index.html' , {'notes' : a})
 
 
 def save_note(request):
