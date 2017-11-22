@@ -1,0 +1,57 @@
+Login Controller :
+	Signup:
+		Name, password, username, tag
+	Login:
+		Username Password
+	Logout:
+		Logout
+
+
+Note Object :
+		a) Note content
+		b) upvote
+		c) downvote
+		d) comments
+		e) views
+		f) author id
+		g) tags
+		h) Color coding
+		i) 
+scoring functionality													
+
+(personal View)
+Analytics 1) Notes completed
+	  2) Topic wise completed notes
+	  3) Student rating
+
+
+Login:
+	1st page:
+			1) Other users Notes seleted on his tags
+				a) get_notes api
+				b) 
+			2) Analytics
+				a) Chart :- N
+			3) Side navBar
+				a) Most viewed
+				b) Most rated
+				c) 
+			4) Main navbar
+				a) search box
+				b) personal notes
+				c) cheatsheet view
+				d) homepage
+	2nd page:
+			1) Personal notes 
+				a) add
+				b) update
+				c) delete
+			2) colorcoding
+    CheatSheetView :
+
+
+{																																													3rd page: (cheatsheet view)
+
+
+
+{
