@@ -11,20 +11,21 @@ from django.views.generic.base import RedirectView
 import  json
 from django.db import  connection
 
+
+def get_notes(username):
+    cursor = connection.cursor()
+    a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
+    _ = cursor.execute(a)
+    rows = cursor.fetchall()
+    id = rows[0][0]
+    a = Notes.objects.all().filter(author_id = id)
+    print(a)
+    return a
+
 def save_note(request):
-    print(request.method)
-    print(request.POST)
     username = request.session['username']
     print(username)
     data = json.loads(request.body)
-    print(data)
-    print(data['tags'] , '-------------------')
-    #n = NotesForm(data)
-    #print(request.body)
-    #print(n)
-    #print(n.is_valid())
-    #if n.is_valid():
-    print('True')
     note_obj = Notes()
     note_obj.content = data['content']
     note_obj.title = data['title']
@@ -36,7 +37,7 @@ def save_note(request):
     a = "select 1 as id , max(id) max_id from \"AdaptiveCheatSheet_notes\""
     _ = cursor.execute(a)
     rows = cursor.fetchall()
-    #print(rows[0][1]+1)
+    print(rows[0][1]+1)
     note_obj.note_id = rows[0][1]+1
     a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
     _ = cursor.execute(a)
@@ -45,7 +46,8 @@ def save_note(request):
     note_obj.author_id = rows[0][0]
     note_obj.type = 1
     note_obj.save()
-    return 0
+    temp = loader.get_template('index.html')
+    return HttpResponse(temp.render({}, request))
 
 def favicon_view(request):
     RedirectView.as_view(url='/static/favicon.ico', permanent=True)
@@ -72,10 +74,12 @@ def login(request):
                 request.session['username']= user_enter.username
                 username = request.session['username']
                 temp  = loader.get_template('index.html')
+                all_notes = get_notes(username)
                 context = {
-                       'Username' : username
+                       'Username' : username,
+                        'notes' : all_notes
                 }
-
+                get_notes(username)
                 # ----------------------------Context Created-----------------------------#
                 return HttpResponse(temp.render(context , request))
             else:
