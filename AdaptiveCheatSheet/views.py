@@ -12,8 +12,9 @@ import  json
 from django.db import  connection
 
 
-def get_notes(username):
+def get_notes(request):
     cursor = connection.cursor()
+    username = request.session['username']
     a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
     _ = cursor.execute(a)
     rows = cursor.fetchall()
@@ -21,6 +22,7 @@ def get_notes(username):
     a = Notes.objects.all().filter(author_id = id)
     print(a)
     return a
+
 
 def save_note(request):
     username = request.session['username']
@@ -79,7 +81,6 @@ def login(request):
                        'Username' : username,
                         'notes' : all_notes
                 }
-
                 # ----------------------------Context Created-----------------------------#
                 return HttpResponse(temp.render(context , request))
             else:

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5c16594-9ad1-4136-a2d1-40a771f995a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" afterPath="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" afterPath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,16 +62,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1511391057260" expanded="true" signature="472:541" ph="select 1 as AdaptiveCheatSheet_user" />
-                <marker date="1511391057260" expanded="true" signature="1082:1147" ph="select 1 as AdaptiveCheatSheet_notes" />
-                <marker date="1511391057260" expanded="true" signature="1273:1342" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511391552990" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+                <marker date="1511391552990" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
+                <marker date="1511391552990" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
               </folding>
             </state>
           </provider>
@@ -143,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -189,12 +190,12 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/app-rest.js" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/settings.py" />
-        <option value="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/models.py" />
         <option value="$PROJECT_DIR$/static/controllers.js" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/forms.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/da16117a-c9d7-4715-afb5-6566ab82de5d/console.sql" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
+        <option value="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
       </list>
     </option>
   </component>
@@ -414,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511391038268</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="&#10;Today change">
+      <created>1511391062236</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511391062236</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -743,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -856,14 +856,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1511391057260" expanded="true" signature="472:541" ph="select 1 as AdaptiveCheatSheet_user" />
-            <marker date="1511391057260" expanded="true" signature="1082:1147" ph="select 1 as AdaptiveCheatSheet_notes" />
-            <marker date="1511391057260" expanded="true" signature="1273:1342" ph="select 1 as AdaptiveCheatSheet_user" />
+            <marker date="1511391552990" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
+            <marker date="1511391552990" expanded="true" signature="1125:1190" ph="select 1 as AdaptiveCheatSheet_notes" />
+            <marker date="1511391552990" expanded="true" signature="1316:1385" ph="select 1 as AdaptiveCheatSheet_user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
