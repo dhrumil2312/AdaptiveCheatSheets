@@ -23,6 +23,7 @@ function NotesController($scope, $http) {
     //Initi of all notes when login is done !!
 
     $scope.initForActivity = function () {
+
         //Get all notes for user
         var userNotes = [];
         $http({
@@ -43,7 +44,9 @@ function NotesController($scope, $http) {
 
     }
 
-    // $scope.notes = JSON.parse(localStorage.getItem('notes'));
+    var notesContainer;
+
+    $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
     $scope.noteTags = '';
