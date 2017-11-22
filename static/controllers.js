@@ -55,7 +55,7 @@ function NotesController($scope , $http) {
     }
 
     $scope.addNote = function() {
-        var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(), "msg" : $scope.noteMessage};
+        var noteData = {"title" : $scope.noteTitle, "date" : new Date().getTime(),"tags":$scope.noteTags, "content" : $scope.noteMessage};
         $scope.notes.push(n);
         console.log("notedata is : ",noteData);
         var username = 'aaa';
