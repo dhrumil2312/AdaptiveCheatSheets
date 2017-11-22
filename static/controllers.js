@@ -20,28 +20,30 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
 
 function NotesController($scope, $http) {
 
+    //Initi of all notes when login is done !!
 
-    var notesContainer;
+    $scope.initForActivity = function () {
+        //Get all notes for user
+        var userNotes = [];
+        $http({
+            url: '/getnotes/',
+            method: 'GET'
 
-    //Get all notes for user
-    var userNotes = [];
-    $http({
-        url: '/getnotes/',
-        method: 'GET'
+        }).success(function (response) {
+            userNotes = response;
+            console.log("all user notes", userNotes);
+            //Have to update the chart series data:
+            for (var i = 0; i < userNotes.length; i++)
+                $scope.notes.push(userNotes[i]);
 
-    }).success(function (response) {
-        userNotes = response;
-        console.log("all user notes",userNotes);
-        //Have to update the chart series data:
-        for (var i = 0; i < userNotes.length; i++)
-            $scope.notes.push(userNotes[i]);
-
-    });
+        });
 
 
-    alert("getting all notes")
+        alert("getting all notes");
 
-    $scope.notes = JSON.parse(localStorage.getItem('notes'));
+    }
+
+    // $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
     $scope.noteTags = '';
