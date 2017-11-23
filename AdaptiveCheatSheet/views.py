@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.template import loader
 import datetime
+from django.core import serializers
 from django.db.models import *
 from django.db import connection
 from django.views.generic.base import RedirectView
@@ -22,12 +23,13 @@ def get_notes(request):
     print(id , username)
 
     all_note_obj = Notes.objects.all().filter(author_id = id)
+    all_note_obj = serializers.serialize('json', all_note_obj)
     print(all_note_obj)
     context = {
         'all_note_obj': all_note_obj,
         'Username': username,
     }
-    return HttpResponse(context,content_type="application/json")
+    return HttpResponse(all_note_obj,content_type="application/json")
 
 
 def save_note(request):
