@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5c16594-9ad1-4136-a2d1-40a771f995a1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Note_data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" afterPath="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,76 +54,101 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <marker date="1511393830637" expanded="true" signature="446:10077" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="1507:1847" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="1910:1978" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="2016:2140" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="2049:2089" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="2095:2134" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="2226:3000" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="2735:2781" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3036:3647" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3116:3337" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3173:3327" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3687:4575" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3862:4272" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="3985:4262" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="4617:4672" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="4712:4964" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5001:5379" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5051:5322" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5156:5222" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5328:5373" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5418:5655" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5511:5570" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5695:5999" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5817:5953" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="5871:5943" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6039:6537" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6160:6262" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6194:6252" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6453:6500" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6576:7205" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6697:6861" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6731:6789" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="6795:6851" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="7121:7168" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="7572:7766" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="7814:8060" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8104:8243" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8287:8555" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8368:8541" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8460:8524" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8602:8889" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="8927:8992" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9035:9478" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9269:9333" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9522:9572" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9616:9663" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9710:10073" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9740:10067" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9788:9840" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9891:9949" ph="{...}" />
-                <marker date="1511393830637" expanded="true" signature="9999:10057" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="446:10088" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="1518:1858" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="1564:1752" ph="{&quot;title&quot;: &quot;Read Help&quot;...}" />
+                <marker date="1511404676495" expanded="true" signature="1921:1989" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="2027:2151" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="2060:2100" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="2106:2145" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="2237:3011" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="2617:2716" ph="{&quot;url&quot;: '/addnotes/'...}" />
+                <marker date="1511404676495" expanded="true" signature="2746:2792" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3047:3658" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3127:3348" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3184:3338" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3698:4586" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3873:4283" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="3996:4273" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="4628:4683" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="4723:4975" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5012:5390" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5062:5333" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5167:5233" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5339:5384" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5429:5666" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5522:5581" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5706:6010" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5828:5964" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="5882:5954" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6050:6548" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6171:6273" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6205:6263" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6464:6511" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6587:7216" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6708:6872" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6742:6800" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="6806:6862" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="7132:7179" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="7269:7538" ph="{&quot;containment&quot;: &quot;window&quot;...}" />
+                <marker date="1511404676495" expanded="true" signature="7583:7777" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="7825:8071" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8115:8254" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8298:8566" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8379:8552" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8471:8535" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8613:8900" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8761:8862" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="8938:9003" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9046:9489" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9081:9368" ph="{&quot;closeText&quot;: &quot;&quot;...}" />
+                <marker date="1511404676495" expanded="true" signature="9246:9358" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9280:9344" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9533:9583" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9627:9674" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9721:10084" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9751:10078" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9799:9851" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="9902:9960" ph="{...}" />
+                <marker date="1511404676495" expanded="true" signature="10010:10068" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
                 <marker date="1511394381746" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
                 <marker date="1511394381746" expanded="true" signature="1315:1380" ph="select 1 as AdaptiveCheatSheet_notes" />
                 <marker date="1511394381746" expanded="true" signature="1506:1575" ph="select 1 as AdaptiveCheatSheet_user" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdaptiveCheatSheet_notes" pinned="false" current-in-tab="false">
+        <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Note_data.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Note_data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="500" column="0" lean-forward="true" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,25 +168,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdaptiveCheatSheet_notes" pinned="false" current-in-tab="false">
-        <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -247,6 +253,7 @@
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/urls.py" />
         <option value="$PROJECT_DIR$/static/controllers.js" />
         <option value="$PROJECT_DIR$/AdaptiveCheatSheet/views.py" />
+        <option value="$PROJECT_DIR$/Note_data.txt" />
       </list>
     </option>
   </component>
@@ -494,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511393102573</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Today changes">
+      <created>1511394385365</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1511394385365</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -512,10 +526,10 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@AdaptiveCheatSheet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48184568" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5665658" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.46217853" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5695915" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4591528" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.4334342" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.43040848" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48487142" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41734862" sideWeight="0.48487142" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -588,57 +602,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/.keep">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -814,6 +777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,74 +900,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <marker date="1511393830637" expanded="true" signature="446:10077" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="1507:1847" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="1910:1978" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="2016:2140" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="2049:2089" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="2095:2134" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="2226:3000" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="2735:2781" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3036:3647" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3116:3337" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3173:3327" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3687:4575" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3862:4272" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="3985:4262" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="4617:4672" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="4712:4964" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5001:5379" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5051:5322" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5156:5222" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5328:5373" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5418:5655" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5511:5570" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5695:5999" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5817:5953" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="5871:5943" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6039:6537" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6160:6262" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6194:6252" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6453:6500" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6576:7205" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6697:6861" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6731:6789" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="6795:6851" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="7121:7168" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="7572:7766" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="7814:8060" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8104:8243" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8287:8555" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8368:8541" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8460:8524" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8602:8889" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="8927:8992" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9035:9478" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9269:9333" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9522:9572" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9616:9663" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9710:10073" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9740:10067" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9788:9840" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9891:9949" ph="{...}" />
-            <marker date="1511393830637" expanded="true" signature="9999:10057" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="446:10088" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="1518:1858" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="1564:1752" ph="{&quot;title&quot;: &quot;Read Help&quot;...}" />
+            <marker date="1511404676495" expanded="true" signature="1921:1989" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="2027:2151" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="2060:2100" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="2106:2145" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="2237:3011" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="2617:2716" ph="{&quot;url&quot;: '/addnotes/'...}" />
+            <marker date="1511404676495" expanded="true" signature="2746:2792" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3047:3658" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3127:3348" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3184:3338" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3698:4586" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3873:4283" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="3996:4273" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="4628:4683" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="4723:4975" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5012:5390" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5062:5333" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5167:5233" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5339:5384" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5429:5666" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5522:5581" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5706:6010" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5828:5964" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="5882:5954" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6050:6548" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6171:6273" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6205:6263" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6464:6511" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6587:7216" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6708:6872" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6742:6800" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="6806:6862" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="7132:7179" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="7269:7538" ph="{&quot;containment&quot;: &quot;window&quot;...}" />
+            <marker date="1511404676495" expanded="true" signature="7583:7777" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="7825:8071" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8115:8254" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8298:8566" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8379:8552" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8471:8535" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8613:8900" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8761:8862" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="8938:9003" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9046:9489" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9081:9368" ph="{&quot;closeText&quot;: &quot;&quot;...}" />
+            <marker date="1511404676495" expanded="true" signature="9246:9358" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9280:9344" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9533:9583" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9627:9674" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9721:10084" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9751:10078" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9799:9851" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="9902:9960" ph="{...}" />
+            <marker date="1511404676495" expanded="true" signature="10010:10068" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AdaptiveCheatSheet/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
             <marker date="1511394381746" expanded="true" signature="514:583" ph="select 1 as AdaptiveCheatSheet_user" />
             <marker date="1511394381746" expanded="true" signature="1315:1380" ph="select 1 as AdaptiveCheatSheet_notes" />
             <marker date="1511394381746" expanded="true" signature="1506:1575" ph="select 1 as AdaptiveCheatSheet_user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/51b25da/da16117a-c9d7-4715-afb5-6566ab82de5d/AdaptiveCheatSheet.public.AdaptiveCheatSheet_notes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="500" column="0" lean-forward="true" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
