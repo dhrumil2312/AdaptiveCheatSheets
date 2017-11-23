@@ -24,21 +24,23 @@ function NotesController($scope, $http) {
 
     // $scope.initForActivity = function () {
 
-        //Get all notes for user
-        var userNotes = [];
-        $http({
-            url: '/getnotes/',
-            method: 'GET'
+    //Get all notes for user
+    var userNotes = [];
+    $http({
+        url: '/getnotes/',
+        method: 'GET'
 
-        }).success(function (response) {
-            userNotes = response;
-            console.log("all user notes", userNotes);
-            //Have to update the chart series data:
-            for (var i = 0; i < userNotes.length; i++)
-                $scope.notes.push(userNotes[i]);
+    }).success(function (response) {
+        console.log("all user notes", response);
 
-        });
-        alert("getting all notes");
+        userNotes = response.all_note_obj;
+        console.log("all user notes", userNotes);
+        //Have to update the chart series data:
+        for (var i = 0; i < userNotes.length; i++)
+            $scope.notes.push(userNotes[i]);
+
+    });
+    alert("getting all notes");
 
     // };
 
