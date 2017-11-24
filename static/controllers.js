@@ -20,33 +20,32 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
 
 function NotesController($scope, $http) {
 
-    //Initi of all notes when login is done !!
+    //Init of all notes when login is done !!
 
-    // $scope.initForActivity = function () {
+    $scope.initForActivity = function () {
 
-    //Get all notes for user
-    var userNotes = [];
-    $http({
-        url: '/getnotes/',
-        method: 'GET'
-
-    }).success(function (response) {
-        console.log("all user notes", response);
-
-        userNotes = response.all_note_obj;
-        console.log("all user notes", userNotes);
-        //Have to update the chart series data:
-        for (var i = 0; i < userNotes.length; i++)
-            $scope.notes.push(userNotes[i]);
-
-    });
-    alert("getting all notes");
-
-    // };
+        //Get all notes for user
+        var userNotes = [];
+        $http({
+            url: '/getnotes/',
+            method: 'GET'
+        }).success(function (response) {
+            console.log("all user notes", response);
+            userNotes = response;
+            console.log("all user notes", userNotes);
+            //Have to update the chart series data:
+            for (var i = 0; i < userNotes.length; i++) {
+                $scope.notes.push(userNotes[i].fields);
+                console.log("all user notes", userNotes[i].fields);
+            }
+        });
+        alert("getting all notes");
+        console.log("all scope notes", $scope.notes);
+    };
 
     var notesContainer;
 
-    $scope.notes = JSON.parse(localStorage.getItem('notes'));
+    // $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
     $scope.noteTags = '';
@@ -85,6 +84,10 @@ function NotesController($scope, $http) {
 
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
+
+        console.log("all scope notes", $scope.notes);
+
+
         var noteObject = new Object();
         noteObject.title = $scope.noteTitle;
         noteObject.tags = $scope.noteTags;
@@ -114,7 +117,7 @@ function NotesController($scope, $http) {
         for (var i = 0; i < len; i++) {
             if ($scope.notes[i].date == $scope.noteId) {
                 $scope.notes[i].title = $scope.noteTitle;
-                $scope.notes[i].msg = $scope.noteMessage;
+                $scope.notes[i].content = $scope.noteMessage;
                 break;
             }
         }
@@ -129,7 +132,7 @@ function NotesController($scope, $http) {
     }
 
     $scope.deleteNote = function (id) {
-        var note = {"title": "", "date": "", "msg": "", "selected": false};
+        var note = {"title": "", "date": "", "content": "", "selected": false};
         var index;
         var len = $scope.notes.length;
 
@@ -138,7 +141,7 @@ function NotesController($scope, $http) {
                 index = i;
                 note.title = $scope.notes[i].title; // there is definately a better way
                 note.date = $scope.notes[i].date;  // to building this note
-                note.msg = $scope.notes[i].msg;
+                note.content = $scope.notes[i].content;
                 break;
             }
         }
@@ -268,10 +271,11 @@ function NotesController($scope, $http) {
         $('#formWrapper textarea').focus();
     }
 
+    // Edit note call to update the call.
     $scope.showEditNoteForm = function (note) {
-        $scope.noteMessage = note.msg;
+        $scope.noteMessage = note.content;
         $scope.noteTitle = note.title;
-        $scope.noteId = note.date;
+        $scope.note_id = note.note_id;
         $scope.submitButton = 'Update';
 
         $('#formWrapper').slideToggle();

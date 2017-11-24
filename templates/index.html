@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{%static 'stickys.css' %}" />
   </head>
 
-  <body ng-controller="NotesController">
+  <body ng-controller="NotesController" ng-init="initForActivity()">
 
     <!-- Navigation, User Control Panel -->
     <nav>
@@ -42,11 +42,11 @@
 
     <!-- the notes -->
     <ul class="clearfix" id="notesContainer">
-      <li ng-repeat="note in notes" class="aNote" id="{{ note.date }}" my-post-repeat-directive>
+      <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
         <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-        <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.date)"></a></p>
+        <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         <h1>{{ note.title }}</h1>
-        <p class="noteDate">{{ note.date | date:'EEE, MMMM d @ h:mm a' }}</p>
+{#        <p class="noteDate">{{ note.date | date:'EEE, MMMM d @ h:mm a' }}</p>#}
         <p>{{ note.content }}</p>
       </li>
     </ul>
