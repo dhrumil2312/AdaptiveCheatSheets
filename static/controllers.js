@@ -23,7 +23,7 @@ function NotesController($scope, $http) {
     //Init of all notes when login is done !!
 
     $scope.initForActivity = function () {
-
+        $scope.notes = [];
         //Get all notes for user
         var userNotes = [];
         $http({
@@ -32,20 +32,19 @@ function NotesController($scope, $http) {
         }).success(function (response) {
             console.log("all user notes", response);
             userNotes = response;
-            console.log("all user notes", userNotes);
             //Have to update the chart series data:
             for (var i = 0; i < userNotes.length; i++) {
                 $scope.notes.push(userNotes[i].fields);
-                console.log("all user notes", userNotes[i].fields);
+                console.log("all user notes in loop", userNotes[i].fields);
             }
         });
         alert("getting all notes");
-        console.log("all scope notes", $scope.notes);
+        console.log("all scope notes from server", $scope.notes);
     };
 
+    $scope.initForActivity();
     var notesContainer;
 
-    // $scope.notes = JSON.parse(localStorage.getItem('notes'));
     $scope.recycle = JSON.parse(localStorage.getItem('notes-recycle'));
     $scope.noteMessage = '';
     $scope.noteTags = '';
@@ -57,17 +56,17 @@ function NotesController($scope, $http) {
     $scope.rbSelect = true;
     $scope.rbChildBtns = true;
 
-    if ($scope.notes == null || $scope.notes.length < 1) {
-        $scope.notes = [];
-
-        var n = {
-            "title": "Read Help",
-            "date": new Date().getTime(),
-            "msg": "Click on the \"Help\" icon where you will learn how to create and delete notes."
-        };
-        $scope.notes.push(n);
-        localStorage.setItem("notes", JSON.stringify($scope.notes));
-    }
+    /* if ($scope.notes == null || $scope.notes.length < 1) {
+         $scope.notes = [];
+         alert("empty");
+         var n = {
+             "title": "Read Help",
+             "tag": "Help",
+             "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
+         };
+         $scope.notes.push(n);
+         localStorage.setItem("notes", JSON.stringify($scope.notes));
+     }*/
 
     if ($scope.recycle == null || $scope.recycle.length < 1) {
         $scope.recycle = [];
@@ -80,12 +79,18 @@ function NotesController($scope, $http) {
         } else {
             this.addNote();
         }
-    }
+    };
+
+
+    $scope.loadbutton = function () {
+        alert("new function");
+        console.log("loaded notes",$scope.notes);
+    };
 
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
 
-        console.log("all scope notes", $scope.notes);
+        console.log("while adding ntoes existing notes", $scope.notes);
 
 
         var noteObject = new Object();
@@ -115,7 +120,7 @@ function NotesController($scope, $http) {
         var len = $scope.notes.length;
 
         for (var i = 0; i < len; i++) {
-            if ($scope.notes[i].date == $scope.noteId) {
+            if ($scope.notes[i].note_id == $scope.noteId) {
                 $scope.notes[i].title = $scope.noteTitle;
                 $scope.notes[i].content = $scope.noteMessage;
                 break;
@@ -132,15 +137,15 @@ function NotesController($scope, $http) {
     }
 
     $scope.deleteNote = function (id) {
-        var note = {"title": "", "date": "", "content": "", "selected": false};
+        var note = {"title": "", "tag": "", "content": "", "selected": false};
         var index;
         var len = $scope.notes.length;
 
         for (var i = 0; i < len; i++) {              // I think jquery filter() would work here, instead of for loop
-            if ($scope.notes[i].date == id) {
+            if ($scope.notes[i].note_id == id) {
                 index = i;
                 note.title = $scope.notes[i].title; // there is definately a better way
-                note.date = $scope.notes[i].date;  // to building this note
+                note.tag = $scope.notes[i].tag;  // to building this note
                 note.content = $scope.notes[i].content;
                 break;
             }
@@ -273,6 +278,7 @@ function NotesController($scope, $http) {
 
     // Edit note call to update the call.
     $scope.showEditNoteForm = function (note) {
+
         $scope.noteMessage = note.content;
         $scope.noteTitle = note.title;
         $scope.note_id = note.note_id;

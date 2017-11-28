@@ -39,11 +39,11 @@
  */
 @font-face {
   font-family: 'DroidSansRegular';
-  src: url('../../static/fonts/DroidSans-webfont.eot');
-  src: url('../../static/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../../static/fonts/DroidSans-webfont.woff') format('woff'),
-       url('../../static/fonts/DroidSans-webfont.ttf') format('truetype'),
-       url('../../static/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+  src: url('/static/fonts/DroidSans-webfont.eot');
+  src: url('/static/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/DroidSans-webfont.woff') format('woff'),
+       url('/static/fonts/DroidSans-webfont.ttf') format('truetype'),
+       url('/static/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -79,7 +79,7 @@ html {font-size: 100%;}   /* remove this once media queries are active */
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../../static/img/corkboard.jpg");
+  background-image: url("/static/img/corkboard.jpg");
   font-size: 100%;
   line-height: 1.61803398875em;
   font-family: DroidSansRegular;
@@ -154,7 +154,7 @@ ul#notesContainer li {
   list-style-type: none;
   background-color: #FFC;
   color: #444;
-  font-family: BloklettersBalpen;
+  /*font-family: BloklettersBalpen;*/
   box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
   z-index: 1;
 
