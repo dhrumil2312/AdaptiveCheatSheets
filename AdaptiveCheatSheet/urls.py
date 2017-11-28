@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^login/', views.login),
     url(r'^addnotes/', views.save_note ),
     url(r'^getnotes/', views.get_notes ),
-    url(r'^getnotesbytag/', views.get_notes_bytag)
+    url(r'^getnotesbytag/', views.get_notes_bytag),
+    url(r'^useractivity/', views.user_activity)
 ]

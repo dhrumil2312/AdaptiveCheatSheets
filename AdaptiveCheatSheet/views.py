@@ -31,6 +31,9 @@ def get_notes_bytag(request):
     return return_obj
 
 
+def user_activity(request):
+    temp = loader.get_template("UserActivityChart.html")
+    return HttpResponse(temp.render({} , request))
 
 def get_notes(request):
     cursor = connection.cursor()
