@@ -21,9 +21,21 @@ angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
 function NotesController($scope, $http) {
 
     //Init of all notes when login is done !!
+    $scope.notes = [];
+
+
+     if ($scope.notes == null || $scope.notes.length < 1) {
+         $scope.notes = [];
+         var n = {
+             "title": "Read Help",
+             "tag": "Help",
+             "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
+         };
+         $scope.notes.push(n);
+         localStorage.setItem("notes", JSON.stringify($scope.notes));
+     }
 
     $scope.initForActivity = function () {
-        $scope.notes = [];
         //Get all notes for user
         var userNotes = [];
         $http({
@@ -56,18 +68,6 @@ function NotesController($scope, $http) {
     $scope.rbSelect = true;
     $scope.rbChildBtns = true;
 
-    /* if ($scope.notes == null || $scope.notes.length < 1) {
-         $scope.notes = [];
-         alert("empty");
-         var n = {
-             "title": "Read Help",
-             "tag": "Help",
-             "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
-         };
-         $scope.notes.push(n);
-         localStorage.setItem("notes", JSON.stringify($scope.notes));
-     }*/
-
     if ($scope.recycle == null || $scope.recycle.length < 1) {
         $scope.recycle = [];
         $scope.rbSelect = true;
@@ -84,7 +84,7 @@ function NotesController($scope, $http) {
 
     $scope.loadbutton = function () {
         alert("new function");
-        console.log("loaded notes",$scope.notes);
+        console.log("loaded notes", $scope.notes);
     };
 
     //Adding note prod code ready with backend api
