@@ -20,23 +20,22 @@ var mcsas = angular.module('mcsas', []);
 //     };
 // });
 
-
-mcsas.controller('NotesController',function($scope, $http) {
+mcsas.controller('NotesController', function ($scope, $http) {
 
     //Init of all notes when login is done !!
     $scope.notes = [];
 
 
-     if ($scope.notes == null || $scope.notes.length < 1) {
-         $scope.notes = [];
-         var n = {
-             "title": "Read Help",
-             "tag": "Help",
-             "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
-         };
-         $scope.notes.push(n);
-         localStorage.setItem("notes", JSON.stringify($scope.notes));
-     }
+    if ($scope.notes == null || $scope.notes.length < 1) {
+        $scope.notes = [];
+        var n = {
+            "title": "Read Help",
+            "tag": "Help",
+            "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
+        };
+        $scope.notes.push(n);
+        localStorage.setItem("notes", JSON.stringify($scope.notes));
+    }
 
     $scope.initForActivity = function () {
         //Get all notes for user
@@ -53,7 +52,6 @@ mcsas.controller('NotesController',function($scope, $http) {
                 console.log("all user notes in loop", userNotes[i].fields);
             }
         });
-        alert("getting all notes");
         console.log("all scope notes from server", $scope.notes);
     };
 
@@ -84,17 +82,10 @@ mcsas.controller('NotesController',function($scope, $http) {
         }
     };
 
-
-    $scope.loadbutton = function () {
-        alert("new function");
-        console.log("loaded notes", $scope.notes);
-    };
-
     //Adding note prod code ready with backend api
     $scope.addNote = function () {
 
         console.log("while adding ntoes existing notes", $scope.notes);
-
 
         var noteObject = new Object();
         noteObject.title = $scope.noteTitle;
