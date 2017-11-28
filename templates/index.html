@@ -43,14 +43,10 @@
 <!-- the notes -->
 <ul class="clearfix" id="notesContainer">
     <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-        <button><h5> {{ note.content }}</h5></button>
-        <label>{{ note.content }}</label>
         <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
         <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-        <h1>{{ note.title }}</h1>
-        <p>{{ note.content }}</p>
-        <p>{{ note.note_id }}</p>
-        <p>{{ note.msg }}</p>
+        <h1 ng-bind="note.title"></h1>
+        <p ng-bind="note.content"></p>
     </li>
 </ul>
 
@@ -83,7 +79,7 @@
         <div class="control-group">
             <div class="controls">
                 <button type="submit" class="btn btn-primary"><span aria-hidden="true"
-                                                                    class="icon-new"></span> {{ submitButton }}</button>
+                                                                    class="icon-new"></span> <button ng-bind="submitButton"></button>
                 <button type="button" class="btn btn-danger" id="cancelButton" ng-click="closeAddNoteForm()"><span
                         aria-hidden="true" class="icon-cancel"></span> Cancel
                 </button>
@@ -99,8 +95,8 @@
         <p class="closeRecycleBinIconWrapper"><a class="icon-cancel" ng-click="toggleRecycleBin()"></a></p>
     </div>
     <div class="rbContentWrapper">
-        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect"><span
-                class="icon-checkbox"></span> {{ rbSelectBtn }}</button>
+        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect" ng-bind="rbSelectBtn"><span
+                class="icon-checkbox"></span> </button>
         <button type="button" class="btn" ng-disabled="rbChildBtns" ng-click="permDelNotes()"><span
                 class="icon-trash-skinny"></span> Delete
         </button>
@@ -120,9 +116,9 @@
             <tr ng-repeat="note in recycle | orderBy:rbOrder">
                 <td><input type="checkbox" ng-model="note.selected"
                            ng-change="setChildBtns()"/> {{ note.note_id }}</td>
-                <td>{{ note.title }}</td>
-                <td>{{ note.tag }}</td>
-                <td>{{ note.content }}</td>
+                <td ng-bind="note.title">{{ note.title }}</td>
+                <td ng-bind="note.tag">{{ note.tag }}</td>
+                <td ng-bind="note.content">{{ note.content }}</td>
             </tr>
             </tbody>
         </table>

@@ -5,20 +5,23 @@ function em(numberOfEms) {
     return (currentEmSize * numberOfEms);
 }
 
-angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
-    return function (scope, element, attrs) {
-        if (scope.$last) {
-            /*
-             *
-             * empty
-             *
-             */
-        }
-    };
-});
+var mcsas = angular.module('mcsas', []);
+
+//
+// angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
+//     return function (scope, element, attrs) {
+//         if (scope.$last) {
+//             /*
+//              *
+//              * empty
+//              *
+//              */
+//         }
+//     };
+// });
 
 
-function NotesController($scope, $http) {
+mcsas.controller('NotesController',function($scope, $http) {
 
     //Init of all notes when login is done !!
     $scope.notes = [];
@@ -361,4 +364,4 @@ function NotesController($scope, $http) {
         }
     })
 
-}
+});
