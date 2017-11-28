@@ -2,46 +2,15 @@
 
 var myapp = angular.module('myapp', ["highcharts-ng"]);
 
-
-myapp.factory('sharedUser', function () {
-    var username = "bbb";
-
-    function addUsername(user) {
-        username = user;
-    }
-
-    function getUsername() {
-        return username;
-    }
-
-    return {
-        addUsername: addUsername,
-        getUsername: getUsername
-    };
-
-
-});
-
-
 myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $window) {
-
-    //RETRIEVE VALUE
-    var username = $window.sessionStorage.getItem("username");
-    console.log("session data", username);
-
 
     $scope.initForActivity = function () {
         $http.defaults.useXDomain = true;
         delete $http.defaults.headers.common['X-Requested-With'];
         var service = [];
         $http({
-            url: 'http://localhost:8989/userProfile/' + username + '/counter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
+            url: 'http://localhost:8989/userProfile/counter/',
+            method: 'GET'
         }).success(function (response) {
             service = response;
             console.log(service);
@@ -81,10 +50,7 @@ myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $
             var seriesArray = $scope.chartSeries[1];
             console.log(seriesArray, "new series array users ");
             seriesArray.data = allUserData;
-
-
         });
-
 
     };
 

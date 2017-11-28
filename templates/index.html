@@ -42,16 +42,13 @@
 
 <!-- the notes -->
 <ul class="clearfix" id="notesContainer">
-    <li ng-repeat="note in notes" id="{{ note.note_id }}">
-        <p> {{ note.note_id }}</p>
+    <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
         <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
         <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-        <h1>{{ note.title }}</h1>
-        <p>{{ note.content }}</p>
+        <h1 ng-bind="note.title"></h1>
+        <p ng-bind="note.content"></p>
     </li>
 </ul>
-
-
 
 <!-- Add note form -->
 <div class="formWrapper" id="formWrapper">
@@ -82,7 +79,7 @@
         <div class="control-group">
             <div class="controls">
                 <button type="submit" class="btn btn-primary"><span aria-hidden="true"
-                                                                    class="icon-new"></span> {{ submitButton }}</button>
+                                                                    class="icon-new"></span> <button ng-bind="submitButton"></button>
                 <button type="button" class="btn btn-danger" id="cancelButton" ng-click="closeAddNoteForm()"><span
                         aria-hidden="true" class="icon-cancel"></span> Cancel
                 </button>
@@ -98,8 +95,8 @@
         <p class="closeRecycleBinIconWrapper"><a class="icon-cancel" ng-click="toggleRecycleBin()"></a></p>
     </div>
     <div class="rbContentWrapper">
-        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect"><span
-                class="icon-checkbox"></span> {{ rbSelectBtn }}</button>
+        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect" ng-bind="rbSelectBtn"><span
+                class="icon-checkbox"></span> </button>
         <button type="button" class="btn" ng-disabled="rbChildBtns" ng-click="permDelNotes()"><span
                 class="icon-trash-skinny"></span> Delete
         </button>
@@ -118,9 +115,10 @@
             <tbody>
             <tr ng-repeat="note in recycle | orderBy:rbOrder">
                 <td><input type="checkbox" ng-model="note.selected"
-                           ng-change="setChildBtns()"/> {{ note.date | date:'MMM d' }}</td>
-                <td>{{ note.title }}</td>
-                <td>{{ note.content }}</td>
+                           ng-change="setChildBtns()"/> {{ note.note_id }}</td>
+                <td ng-bind="note.title">{{ note.title }}</td>
+                <td ng-bind="note.tag">{{ note.tag }}</td>
+                <td ng-bind="note.content">{{ note.content }}</td>
             </tr>
             </tbody>
         </table>
@@ -133,6 +131,15 @@
         <h1>Help</h1>
         <p class="closeHelpIconWrapper"><a class="icon-cancel" ng-click="toggleHelp()"></a></p>
     </div>
+
+
+    <li ng-repeat="note in notes" >
+        <label>{{ note.content }}</label>
+        <label>new content</label>
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+    </li>
+
 
     <article>
         <!-- Creating a new Sticky Note -->

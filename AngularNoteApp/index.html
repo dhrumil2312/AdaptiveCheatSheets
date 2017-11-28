@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="../static/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Adaptive Notes</title>
+    <title>Sticky Notes</title>
 
     <!-- scripts -->
-    <script src="{%static "jquery.min.js"%}"></script>
-    <script src="{%static "jquery-ui.min.js"%}"></script>
-    <script src="{%static "angular.min.js" %}"></script>
-    <script src="{%static "controllers.js" %}"></script>
-    <script src="{%static "effects.js" %}"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery-ui.min.js"></script>
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/effects.js"></script>
 
     <!-- styles -->
-    <link rel="stylesheet" href="{%static "reset.css" %}" />
-    <link rel="stylesheet" href="{%static "bootstrap.min.css" %}" />
-{#    <link rel="stylesheet" href="{%static "stickys.css" %}" />#}
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/stickys.css" />
   </head>
 
   <body ng-controller="NotesController">
@@ -39,7 +39,7 @@
         <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
         <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.date)"></a></p>
         <h1>{{ note.title }}</h1>
-        <p class="noteDate">{{ note.date | date:'EEE, MMMM d @ h:mm a' }}</p>
+{#        <p class="noteDate">{{ note.date | date:'EEE, MMMM d @ h:mm a' }}</p>#}
         <p>{{ note.msg }}</p>
       </li>
     </ul>
@@ -51,23 +51,22 @@
         <!-- success msg -->
         <p class="success" id="success">Sticky note saved</p>
 
-        <!-- title textbox -->
-        <div class="control-group">
-          <label class="control-label" for="noteTitle">Title</label>
-          <div class="controls"><input type="text" id="noteTitle" ng-model="noteTitle" placeholder="Title"/></div>
-        </div>
+        <!-- character count -->
+        <p class="noteCharCount" ng-model="noteMessage"><span>Characters Remaining: <strong>{{140 - noteMessage.length}}</strong></span></p>
+
+        <!-- close icon -->
+        <p class="closeFormIcon"><a id="closeIcon" ng-click="closeAddNoteForm()"><span class="icon-cancel"></span></a></p>
 
         <!-- note body textarea -->
         <div class="control-group">
           <label class="control-label" for="noteMessage">Note</label>
-          <div class="controls"><textarea rows="5" id="noteMessage"  ng-model="noteMessage"></textarea></div>
+          <div class="controls"><textarea rows="5" id="noteMessage" maxlength="140" ng-model="noteMessage"></textarea></div>
         </div>
 
-
-           <!-- Tag textbox -->
+        <!-- title textbox -->
         <div class="control-group">
-          <label class="control-label" for="noteTitle">Tags</label>
-          <div class="controls"><input type="text" id="noteTags" ng-model="noteTags" placeholder="Tags"/></div>
+          <label class="control-label" for="noteTitle">Title</label>
+          <div class="controls"><input type="text" id="noteTitle" ng-model="noteTitle" placeholder="Optional Title"/></div>
         </div>
 
         <!-- submit button -->
@@ -200,11 +199,201 @@
           </ol>
         </div>
 
+        <!-- Access Keys -->
+        <h2>Keyboard Shortcuts (Access Keys)</h2>
+        <div>
+          <p>
+            In addition to using the mouse to click on the navigation icons, you
+            can also use keyboard shortcuts. The keyboard shortcuts are straight
+            forward, for example n = new note, however how you access these shortcuts
+            varies depending on your platform and browser.
+          </p>
+          <!-- Windows -->
+          <table>
+            <caption>Windows</caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>Opera</th>
+                <th>IE</th>
+                <th>Safari</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Note [n]</td>
+                <td>Alt+n</td>
+                <td>Alt+Shift+n</td>
+                <td>Shift+Esc n</td>
+                <td>Alt+n</td>
+                <td>Alt+n</td>
+              </tr>
+              <tr>
+                <td>Help [h]</td>
+                <td>Alt+h</td>
+                <td>Alt+Shift+h</td>
+                <td>Shift+Esc h</td>
+                <td>Alt+h</td>
+                <td>Alt+h</td>
+              </tr>
+              <tr>
+                <td>About [a]</td>
+                <td>Alt+a</td>
+                <td>Alt+Shift+a</td>
+                <td>Shift+Esc a</td>
+                <td>Alt+a</td>
+                <td>Alt+a</td>
+              </tr>
+              <tr>
+                <td>Recycle Bin [r]</td>
+                <td>Alt+r</td>
+                <td>Alt+Shift+r</td>
+                <td>Shift+Esc r</td>
+                <td>Alt+r</td>
+                <td>Alt+r</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Mac -->
+          <table>
+            <caption>Mac</caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>Opera</th>
+                <th>IE</th>
+                <th>Safari</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Note [n]</td>
+                <td>Ctrl+Opt+n</td>
+                <td>Ctrl+Opt+n</td>
+                <td>Shift+Esc n</td>
+                <td>Alt+n</td>
+                <td>Ctrl+Opt+n</td>
+              </tr>
+              <tr>
+                <td>Help [h]</td>
+                <td>Ctrl+Opt+h</td>
+                <td>Ctrl+Opt+h</td>
+                <td>Shift+Esc h</td>
+                <td>Alt+h</td>
+                <td>Ctrl+Opt+h</td>
+              </tr>
+              <tr>
+                <td>About [a]</td>
+                <td>Ctrl+Opt+a</td>
+                <td>Ctrl+Opt+a</td>
+                <td>Shift+Esc a</td>
+                <td>Alt+a</td>
+                <td>Ctrl+Opt+a</td>
+              </tr>
+              <tr>
+                <td>Recycle Bin [r]</td>
+                <td>Ctrl+Opt+r</td>
+                <td>Ctrl+Opt+r</td>
+                <td>Shift+Esc r</td>
+                <td>Alt+r</td>
+                <td>Ctrl+Opt+r</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Linux -->
+          <table>
+            <caption>Linux</caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>Opera</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Note [n]</td>
+                <td>Alt+n</td>
+                <td>Alt+Shift+n</td>
+                <td>Shift+Esc n</td>
+              </tr>
+              <tr>
+                <td>Help [h]</td>
+                <td>Alt+h</td>
+                <td>Alt+Shift+h</td>
+                <td>Shift+Esc h</td>
+              </tr>
+              <tr>
+                <td>About [a]</td>
+                <td>Alt+a</td>
+                <td>Alt+Shift+a</td>
+                <td>Shift+Esc a</td>
+              </tr>
+              <tr>
+                <td>Recycle Bin [r]</td>
+                <td>Alt+r</td>
+                <td>Alt+Shift+r</td>
+                <td>Shift+Esc r</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Getting additional Support -->
+        <h2>Getting Additional Support</h2>
+        <div>
+          <p>
+            If you have further questions please visit our
+            <a href="https://github.com/ScottSolomko/McSas-Sticky-Notes/issues">
+              Issue tracker hosted on GitHub
+            </a>.
+            You can submit your questions there and also read previously asked questions.
+          </p>
+        </div>
+
+        <!-- Reporting a Bug -->
+        <h2>Reporting a Bug</h2>
+        <div>
+          <p>
+            If you find a bug (the application produces an error) please report the
+            error using our
+            <a href="https://github.com/ScottSolomko/McSas-Sticky-Notes/issues">
+              Issue tracker hosted on GitHub
+            </a>. When reporting a bug please include the following information:
+          </p>
+          <ul>
+            <li>The <strong>Browser and its version number</strong> that you are using</li>
+            <li>The <strong>Operating System and its version</strong> that you are using</li>
+          </ul>
+          <p>
+            By submitting the above requested information accurately will help
+            us to recreate your environment and also the error that you have
+            encountered so we can troubleshoot it.
+          </p>
+        </div>
+
+        <!-- Requesting a New Feature -->
+        <h2>Requesting a New Feature</h2>
+        <div>
+          <p>
+            If you would like to see a new feature added to the application please
+            visit our
+            <a href="https://github.com/ScottSolomko/McSas-Sticky-Notes/issues">
+              Issue tracker hosted on GitHub
+            </a>
+            where you can make your request and also see what others are requesting.
+          </p>
+        </div>
 
       </article>
     </div>
 
-    <!-- About Project-->
+    <!-- About -->
     <div class="aboutWindow" id="aboutWindow" title="About Sticky Notes">
       <p class="closeDialogWrapper"><a ng-click="closeAboutDialog()""><span class="icon-cancel"></span></a></p>
 
@@ -233,7 +422,25 @@
 
       <h2>Technologies, Software and Resources</h2>
       <ul class="technologies clearfix">
-
+        <li><a href="http://angularjs.org/">Angular JS</a></li>
+        <li><a href="http://compass-style.org/">Compass</a></li>
+        <li><a href="http://www.w3schools.com/css3/css3_intro.asp">CSS3</a></li>
+        <li><a href="http://css3generator.com/">CSS3 Generator</a></li>
+        <li><a href="http://favicon-generator.org/">Favicon Generator</a></li>
+        <li><a href="http://www.fontsquirrel.com/">Font Squirrel</a></li>
+        <li><a href="http://www.gimp.org/">Gimp</a></li>
+        <li><a href="http://github.com/">GitHub</a></li>
+        <li><a href="http://code.google.com/p/gpick/">Gpick</a></li>
+        <li><a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a></li>
+        <li><a href="http://icomoon.io/">IcoMoon</a></li>
+        <li><a href="http://jquery.com/">jQuery</a></li>
+        <li><a href="http://jqueryui.com/">jQuery UI</a></li>
+        <li><a href="http://net.tutsplus.com/">Nettuts+</a></li>
+        <li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+        <li><a href="http://www.typetester.org/">Typetester</a></li>
+        <li><a href="http://www.colorzilla.com/gradient-editor/">Ultimate CSS Gradient Generator</a></li>
+        <li><a href="http://www.vim.org/">Vim</a></li>
+        <li><a href="http://webdesign.tutsplus.com/">Webdesigntuts+</a></li>
       </ul>
 
       <hr />
