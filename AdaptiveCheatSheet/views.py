@@ -11,6 +11,25 @@ from django.db import connection
 from django.views.generic.base import RedirectView
 import  json
 from django.db import  connection
+import requests
+
+def get_notes_bytag(request):
+    cursor = connection.cursor()
+    username = request.session['username']
+    a = "select 1 as id , tags from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
+    _ = cursor.execute(a)
+    rows = cursor.fetchall()
+    user_tags = set(filter(None , rows[0][1].split(';')))
+    print(user_tags)
+    return_obj = Notes.objects.none()
+    all_note_obj = Notes.objects.all()
+    for obj in all_note_obj:
+        all_tags = set(filter(None,obj.tag.split(';')))
+        if not set(user_tags).isdisjoint(all_tags):
+            return_obj |= obj
+
+    return return_obj
+
 
 
 def get_notes(request):
@@ -47,15 +66,32 @@ def save_note(request):
     a = "select 1 as id , max(id) max_id from \"AdaptiveCheatSheet_notes\""
     _ = cursor.execute(a)
     rows = cursor.fetchall()
-    print(rows[0][1]+1)
-    note_obj.note_id = rows[0][1]+1
+    #print(rows[0][1]+1)
+    note_id = rows[0][1]+1
+    note_obj.note_id = note_id
     a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
     _ = cursor.execute(a)
     rows = cursor.fetchall()
-    #print(rows[0][0])
-    note_obj.author_id = rows[0][0]
+    author_id = rows[0][0]
+    note_obj.author_id = author_id
     note_obj.type = 1
     note_obj.save()
+    # Code to save note on elastic search
+    content = {"note_id" : note_id,
+               "author_id": author_id,
+               "type" : "1",
+               "title": data['title'],
+               "tag": data['tags'],
+               "content": data['content']}
+
+    headers = {'content-type': 'application/json'}
+    url = 'http://localhost:9200/adaptivecheatsheets/data/' + str(note_id+100)
+    print(url)
+    r = requests.put(url, headers=headers, data=json.dumps(content))
+    print(r.content)
+    print(r.status_code)
+    # Code end for elastic search note save.
+    # return of the function
     temp = loader.get_template('index.html')
     return HttpResponse(temp.render({}, request))
 
@@ -109,6 +145,3 @@ def register(request):
             user_obj.tags = f.cleaned_data['tags']
             user_obj.save()
             return redirect('/login/')
-
-
-
