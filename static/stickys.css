@@ -375,8 +375,9 @@ div.recycleBin div.rbHeadingWrapper {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4c47', endColorstr='#3d3c38',GradientType=0 );
 }
 div.recycleBin h1 {
-  margin: 0;
+  margin-right: 3em;
   padding: 0 0 0 3em;
+  text-align: right;
   color: white;
   background-image: url("/static/img/bin.png");
   background-repeat: no-repeat;

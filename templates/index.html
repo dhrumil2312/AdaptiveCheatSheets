@@ -78,7 +78,7 @@
         <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         <h1 ng-bind="note.title"></h1>
         <div><button ng-bind="note.tag"></button></div>
-        <p ng-bind="note.content"></p>
+        <p ng-bind="note.content">{{ note.content }}</p>
 
     </li>
 </ul>
