@@ -123,7 +123,6 @@
         </div>
     </div>
 
-
     <!--Explored Activity Chart for plotting login activity counter with respect to topic-->
 
     <div ng-controller="ExploredTopicActivityController" ng-init="initForLoginActivity()">
@@ -147,8 +146,6 @@
                 <div class="row-fluid">Stack <select ng-model="chartConfig.plotOptions.series.stacking"
                                                      ng-options="t.id as t.title for t in chartStack"></select></div>
 
-                <!--<div>Min: <input type="number" ng-model="chartConfig.xAxis.currentMin"/></div>-->
-                <!--<div>Max: <input type="number" ng-model="chartConfig.xAxis.currentMax"/></div>-->
             </div>
 
             <div ng-repeat="ser in chartSeries">
@@ -195,8 +192,6 @@
                 <div class="row-fluid">Stack <select ng-model="chartConfig.plotOptions.series.stacking"
                                                      ng-options="t.id as t.title for t in chartStack"></select></div>
 
-                <!--<div>Min: <input type="number" ng-model="chartConfig.xAxis.currentMin"/></div>-->
-                <!--<div>Max: <input type="number" ng-model="chartConfig.xAxis.currentMax"/></div>-->
             </div>
 
             <div ng-repeat="ser in chartSeries">
