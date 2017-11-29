@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^addnotes/', views.save_note ),
     url(r'^getnotes/', views.get_notes ),
     url(r'^getnotesbytag/', views.get_notes_bytag),
-    url(r'^useractivity/', views.user_activity)
+    url(r'^useractivity/', views.user_activity),
+    url(r'^api/autocomplete/' , views.elastic)
 ]

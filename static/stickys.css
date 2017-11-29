@@ -76,15 +76,7 @@
  * Settings
  */
 html {font-size: 100%;}   /* remove this once media queries are active */
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url("/static/img/corkboard.jpg");
-  font-size: 100%;
-  line-height: 1.61803398875em;
-  font-family: DroidSansRegular;
-  color: #333;
-}
+
 a, a:focus, a:active, a:hover {
   outline: 0;
   text-decoration: none;
@@ -237,58 +229,6 @@ ul#notesContainer li p.noteDate {
   margin: -0.5em 0 0.5em 0;
 }
 
-/******************************************************************************/
-
-/*
- * The Navigation
- */
-nav {
-  position: fixed;
-  top:  0;
-  left: 0;
-  z-index: 9;
-  height: 100%;
-  padding: 0 0.5em;
-  background-color: rgba(79, 86, 97, 0.9);
-  border-right: 1px solid #B3C7E0;
-}
-nav li {
-  display: block;
-  padding: 0.85em 0.75em 1em 0.75em;
-  margin: 0.75em 0;
-  border:  1px solid #333;
-  border-radius: 0.25em;
-
-  background: rgb(125,126,125);
-  background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1)));
-  background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-  background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-  background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
-}
-nav li:hover {
-  color: #FFF;
-
-  background: rgb(69,72,77);
-  background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1)));
-  background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
-  background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
-  background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
-}
-nav li:hover > a,
-nav li:hover > a:visited,
-nav li:hover > a:hover,
-nav li:hover > a:active {color: #FFF;}
-nav li a {
-  display: block;
-  color: #E5E6E4;
-}
-nav li a:hover {cursor: default;}
 .tooltip {position: relative;}
 .tooltip::before, .tooltip::after {
   position: absolute;

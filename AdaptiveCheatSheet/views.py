@@ -12,6 +12,8 @@ from django.views.generic.base import RedirectView
 import  json
 from django.db import  connection
 import requests
+from elasticsearch import Elasticsearch
+
 
 def get_notes_bytag(request):
     cursor = connection.cursor()
@@ -20,15 +22,23 @@ def get_notes_bytag(request):
     _ = cursor.execute(a)
     rows = cursor.fetchall()
     user_tags = set(filter(None , rows[0][1].split(';')))
-    print(user_tags)
+    #print(user_tags)
     return_obj = Notes.objects.none()
     all_note_obj = Notes.objects.all()
+    nid = []
+
     for obj in all_note_obj:
         all_tags = set(filter(None,obj.tag.split(';')))
+        #print(all_tags)
+        #print("here----------------")
         if not set(user_tags).isdisjoint(all_tags):
-            return_obj |= obj
-
-    return return_obj
+            nid.append(obj.note_id)
+    #print(nid)
+    queryset = Notes.objects.all().filter(note_id__in=nid)
+    #print(queryset.count())
+    queryset = serializers.serialize('json', queryset)
+    print(queryset)
+    return HttpResponse(queryset,content_type="application/json")
 
 
 def user_activity(request):
@@ -43,7 +53,6 @@ def get_notes(request):
     rows = cursor.fetchall()
     id = rows[0][0]
     print(id , username)
-
     all_note_obj = Notes.objects.all().filter(author_id = id)
     all_note_obj = serializers.serialize('json', all_note_obj)
     print(all_note_obj)
@@ -123,7 +132,7 @@ def login(request):
                 request.session['username']= user_enter.username
                 username = request.session['username']
                 temp  = loader.get_template('index.html')
-
+                get_notes_bytag(request)
                 context = {
                        'Username' : username,
                 }
@@ -148,3 +157,32 @@ def register(request):
             user_obj.tags = f.cleaned_data['tags']
             user_obj.save()
             return redirect('/login/')
+
+
+def elastic(request):
+    headers = {'content-type': 'application/json'}
+    #print('HEre!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+    #print(request.is_ajax())
+    query = request.GET['search']
+    search_content = {
+        "query": {
+            "multi_match": {
+                "query": query,
+                "fields": ["content", "title^15", 'tag^25'],
+                "fuzziness" : "AUTO"
+            }
+        }
+    }
+    es = Elasticsearch()
+    result = es.search(index="adaptivecheatsheets", body=search_content)
+    print("Got %d Hits:" % result['hits']['total'])
+    search_results = []
+    for hit in result['hits']['hits']:
+        #print(hit)
+        search_results.append(hit["_source"]["title"])
+
+    resp = request.GET['callback'] + '(' + json.dumps(search_results) + ');'
+    return HttpResponse(resp, content_type='application/json')
+
+    pass
+
