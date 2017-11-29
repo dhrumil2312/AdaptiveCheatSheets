@@ -2,7 +2,7 @@
 
 var myapp = angular.module('myapp', ["highcharts-ng"]);
 
-myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $window) {
+myapp.controller('AllActivityController', function ($scope, $http, $window) {
 
     $scope.initForActivity = function () {
         $http.defaults.useXDomain = true;
@@ -20,11 +20,8 @@ myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $
             for (var i = 0; i < service.length; i++)
                 userData.push(service[i].activityCounter);
 
-
             var seriesArray = $scope.chartSeries[0];
             seriesArray.data = userData;
-
-
         });
 
         //Call for All user
@@ -54,10 +51,9 @@ myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $
 
     };
 
-
     $scope.chartSeries = [
         {
-            "name": " User Activity : " + username,
+            "name": " User Activity : " + "jack",
             "data": [],
             connectNulls: true,
             id: 'User Activity Counter'
@@ -245,7 +241,7 @@ myapp.controller('AllActivityController', function ($scope, $http, sharedUser, $
 myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
 
-    var username = $window.sessionStorage.getItem("username");
+    var username = "jack";
 
 
     //To load the data of the logged in user.
@@ -524,7 +520,8 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 myapp.controller('ExploredTopicActivityController', function ($scope, $http, $window) {
 
 
-    var username = $window.sessionStorage.getItem("username");
+    // var username = $window.sessionStorage.getItem("username");
+    var username = "jack";
 
 
     $scope.initForLoginActivity = function () {
@@ -780,7 +777,8 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 myapp.controller('PercentageTopicController', function ($scope, $http, $window) {
 
 
-    var username = $window.sessionStorage.getItem("username");
+    // var username = $window.sessionStorage.getItem("username");
+    var username = "jack";
 
 
     $scope.initForLoginActivity = function () {
