@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %} " type="image/x-icon"/>
     <link rel="icon" href="{% static  'favicon.ico' %}" type="image/x-icon"/>
 
-    <title>Sticky Notes</title>
+    <title>Adaptive Note App</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -31,6 +31,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href={% static "fonts/font-awesome/css/font-awesome.min.css"%}>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 
 <body ng-controller="NotesController">
@@ -42,14 +44,13 @@
       <a class="navbar-brand" href="#"> Adaptive Cheat Sheets </a>
     </div>
     <ul class="nav navbar-nav">
-        <li accesskey="n" ng-click="showAddNoteForm()">
-        <a  ng-click="showAddNoteForm()"> New Sticky Note </a></li>
-    <li accesskey="h" ng-click="toggleHelp()">
-        <a class="icon icon-help" ng-click="toggleHelp()"> Help </a></li>
-
-        <li id="trashBin"  accesskey="r" ng-click="toggleRecycleBin()">
-        <a class="icon icon-trash" ng-click="toggleRecycleBin()">
-            <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span></a></li>
+        <li ng-click="showAddNoteForm()">
+        <a class="icon fa fa-plus" ng-click="showAddNoteForm()"> Add Note </a></li>
+        <li  ng-click="toggleHelp()">
+        <a class="icon fa fa-info" ng-click="toggleHelp()"> Help </a></li>
+        <li ng-click="toggleRecycleBin()">
+        <a class="icon fa fa-recycle" ng-click="toggleRecycleBin()">
+            <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span>Recycle Bin</a></li>
     </ul>
       <div class="col-sm-3 col-md-3">
         <form class="navbar-form" role="search">
@@ -69,10 +70,11 @@
 </nav>
 
 <!-- the notes -->
+
 <ul class="clearfix" id="notesContainer">
-    <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-        <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-        <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
+    <li ng-repeat="note in notes | limitTo:40" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
+        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         <h1 ng-bind="note.title"></h1>
         <p ng-bind="note.content"></p>
     </li>
@@ -94,7 +96,7 @@
         <!-- note body textarea -->
         <div class="control-group">
             <label class="control-label" for="noteMessage">Note</label>
-            <div class="controls"><textarea rows="5" id="noteMessage" ng-model="noteMessage"></textarea></div>
+            <div class="controls"><textarea rows="5" id="noteMessage" ng-model="noteMessage" ></textarea></div>
         </div>
 
         <!-- Tag textbox -->
@@ -123,7 +125,7 @@
         <p class="closeRecycleBinIconWrapper"><a class="icon-cancel" ng-click="toggleRecycleBin()"></a></p>
     </div>
     <div class="rbContentWrapper">
-        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect" ng-bind="rbSelectBtn"><span
+        <button type="button" class="btn" ng-click="selectAll()"  ng-bind="rbSelectBtn"><span
                 class="icon-checkbox"></span> </button>
         <button type="button" class="btn" ng-disabled="rbChildBtns" ng-click="permDelNotes()"><span
                 class="icon-trash-skinny"></span> Delete
