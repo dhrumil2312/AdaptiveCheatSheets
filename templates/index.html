@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href={% static "fonts/font-awesome/css/font-awesome.min.css"%}>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+{#    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>#}
 </head>
 
 <body ng-controller="NotesController">
@@ -76,9 +77,9 @@
         <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
         <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         <h1 ng-bind="note.title"></h1>
+        <div><button ng-bind="note.tag"></button></div>
         <p ng-bind="note.content"></p>
-        <div>        <button ng-bind="note.tag"></button>
-</div>
+
     </li>
 </ul>
 
@@ -106,15 +107,13 @@
             <label class="control-label" for="noteTitle">Tags</label>
             <div class="controls"><input type="text" id="noteTags" ng-model="noteTags" placeholder="Tags"/></div>
         </div>
+{#        add new way to add tags, commented tags script#}
 
         <!-- submit button -->
         <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn btn-primary"><span aria-hidden="true"
-                                                                    class="icon-new"></span> <button ng-bind="submitButton"></button>
-                <button type="button" class="btn btn-danger" id="cancelButton" ng-click="closeAddNoteForm()"><span
-                        aria-hidden="true" class="icon-cancel"></span> Cancel
-                </button>
+            <div class="controls" style="text-align: center;"><br>
+                <button type="submit" class="btn btn-primary" id="newnotebutton" ng-click ="flashSuccessSave()"><span aria-hidden="true" class="icon-new"></span>  Submit </button>
+                <button type="button" class="btn btn-danger" id="newnotebutton" ng-click="closeAddNoteForm()"><span aria-hidden="true" class="icon-cancel"></span>  Cancel </button>
             </div>
         </div>
     </form>
@@ -274,13 +273,8 @@
         <hr/>
 
         <p>
-            Designed and maintained by
-            <a href="https://github.com/spdrcr78" rel="author">Michael Clune</a>
-            and <a href="https://github.com/ScottSolomko" rel="author">Scott Solomko</a>.
-            This web app is an open source project and is freely available for
-            <a href="https://github.com/ScottSolomko/McSas-Sticky-Notes">download on GitHub</a>.
-            We created McSas Sticky Notes entirely with other freely available software,
-            most of which is also open source.
+            Completed as part of ASU CSE: Adaptive Web Project.<br>
+            Members: Prit Seth, Pravin Chaudhary, Dhrumil Parmar, Jainesh Kothari
         </p>
 
     </article>

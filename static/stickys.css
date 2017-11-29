@@ -328,7 +328,7 @@ form p.closeFormIcon a {
 form p.closeFormIcon a:hover, form p.closeFormIcon a:active {color: #D74C47;}
 textarea {width: 100%;}
 input[type="text"] {width: 100%;}
-#cancelButton {margin-left: 1em;}
+#newnotebutton {margin-left: 1em;}
 /* Rewrite Some Twitter Bootstrap Settings */
 form {
   width: 50%;
