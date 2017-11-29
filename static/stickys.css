@@ -32,45 +32,6 @@
   /*html {font-size: 150%;}*/
 }
 
-/******************************************************************************/
-
-/*
- * Fonts
- */
-@font-face {
-  font-family: 'DroidSansRegular';
-  src: url('/static/fonts/DroidSans-webfont.eot');
-  src: url('/static/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/static/fonts/DroidSans-webfont.woff') format('woff'),
-       url('/static/fonts/DroidSans-webfont.ttf') format('truetype'),
-       url('/static/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CrimsonRoman';
-  src: url('/static/fonts/Crimson-Roman-webfont.eot');
-  src: url('/static/fonts/Crimson-Roman-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/static/fonts/Crimson-Roman-webfont.woff') format('woff'),
-       url('/static/fonts/Crimson-Roman-webfont.ttf') format('truetype'),
-       url('/static/fonts/Crimson-Roman-webfont.svg#CrimsonRoman') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BloklettersBalpen';
-  src: url('/static/fonts/Blokletters-Balpen-webfont.eot');
-  src: url('/static/fonts/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/static/fonts/Blokletters-Balpen-webfont.woff') format('woff'),
-       url('/static/fonts/Blokletters-Balpen-webfont.ttf') format('truetype'),
-       url('/static/fonts/Blokletters-Balpen-webfont.svg#BloklettersBalpen') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/******************************************************************************/
 
 /*
  * Settings
@@ -81,11 +42,19 @@ a, a:focus, a:active, a:hover {
   outline: 0;
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {font-family: CrimsonRoman;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Boogaloo', cursive;}
 h1 {
   font-size: 2em;
   line-height: 1.61803398875em;
   font-weight: normal;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  line-height: 1.61803398875em;
+  font-weight: normal;
+
 }
 strong {font-weight: bold;}
 /******************************************************************************/
