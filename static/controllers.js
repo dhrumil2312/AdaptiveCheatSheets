@@ -26,16 +26,16 @@ mcsas.controller('NotesController', function ($scope, $http) {
     $scope.notes = [];
 
 
-    if ($scope.notes == null || $scope.notes.length < 1) {
-        $scope.notes = [];
-        var n = {
-            "title": "Read Help",
-            "tag": "Help",
-            "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
-        };
-        $scope.notes.push(n);
-        localStorage.setItem("notes", JSON.stringify($scope.notes));
-    }
+    // if ($scope.notes == null || $scope.notes.length < 1) {
+    //     $scope.notes = [];
+    //     var n = {
+    //         "title": "Read Help",
+    //         "tag": "Help",
+    //         "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
+    //     };
+    //     $scope.notes.push(n);
+    //     // localStorage.setItem("notes", JSON.stringify($scope.notes));
+    // }
 
     $scope.initForActivity = function () {
         //Get all notes for user
@@ -93,7 +93,7 @@ mcsas.controller('NotesController', function ($scope, $http) {
         noteObject.content = $scope.noteMessage;
 
         var noteData = {"title": $scope.noteTitle, "tags": $scope.noteTags, "content": $scope.noteMessage};
-        $scope.notes.push(n);
+        $scope.notes.push(noteData);
         console.log("notedata is : ", noteData);
         $http({
             url: '/addnotes/',
@@ -103,7 +103,6 @@ mcsas.controller('NotesController', function ($scope, $http) {
             console.log(response);
         });
 
-        localStorage.setItem('notes', JSON.stringify($scope.notes));
         notesContainer.sortable('refresh');
         $scope.noteMessage = '';
         $scope.noteTitle = '';
@@ -125,7 +124,7 @@ mcsas.controller('NotesController', function ($scope, $http) {
         $scope.noteTitle = '';
         $scope.noteId = 0;
 
-        localStorage.setItem('notes', JSON.stringify($scope.notes));
+        // localStorage.setItem('notes', JSON.stringify($scope.notes));
         notesContainer.sortable('refresh');                             // not sure if this call is required
         this.flashSuccessSave();
     }
@@ -146,7 +145,7 @@ mcsas.controller('NotesController', function ($scope, $http) {
         }
 
         $scope.notes.splice(index, 1);
-        localStorage.setItem('notes', JSON.stringify($scope.notes));
+        // localStorage.setItem('notes', JSON.stringify($scope.notes));
 
         $scope.recycle.push(note);                  // just to see it work
         localStorage.setItem('notes-recycle', JSON.stringify($scope.recycle));
