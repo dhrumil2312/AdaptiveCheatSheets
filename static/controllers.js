@@ -7,36 +7,9 @@ function em(numberOfEms) {
 
 var mcsas = angular.module('mcsas', []);
 
-//
-// angular.module('mcsas', []).directive('myPostRepeatDirective', function () {
-//     return function (scope, element, attrs) {
-//         if (scope.$last) {
-//             /*
-//              *
-//              * empty
-//              *
-//              */
-//         }
-//     };
-// });
-
 mcsas.controller('NotesController', function ($scope, $http) {
 
-    //Init of all notes when login is done !!
     $scope.notes = [];
-
-
-    // if ($scope.notes == null || $scope.notes.length < 1) {
-    //     $scope.notes = [];
-    //     var n = {
-    //         "title": "Read Help",
-    //         "tag": "Help",
-    //         "content": "Click on the \"Help\" icon where you will learn how to create and delete notes."
-    //     };
-    //     $scope.notes.push(n);
-    //     // localStorage.setItem("notes", JSON.stringify($scope.notes));
-    // }
-
     $scope.initForActivity = function () {
         //Get all notes for user
         var userNotes = [];
