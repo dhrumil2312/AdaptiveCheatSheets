@@ -23,3 +23,12 @@ class Notes(models.Model):
     downvote = models.IntegerField()
     view_count = models.IntegerField()
     created_date = models.DateTimeField(auto_now=True)
+
+class useractivity(models.Model):
+    user_id = models.IntegerField()
+    note_id = models.IntegerField()
+    upvote = models.IntegerField()
+    downvote = models.IntegerField()
+    notes_shared = models.BooleanField()
+    post_shared = models.BooleanField()
+    note_access = models.IntegerField()
