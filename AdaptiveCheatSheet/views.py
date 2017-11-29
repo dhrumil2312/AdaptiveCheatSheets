@@ -23,15 +23,17 @@ def get_notes_bytag(request):
     print(user_tags)
     return_obj = Notes.objects.none()
     all_note_obj = Notes.objects.all()
-    id = []
+    nid = []
     for obj in all_note_obj:
         all_tags = set(filter(None,obj.tag.split(';')))
+        print(all_tags)
+        print("here----------------")
         if not set(user_tags).isdisjoint(all_tags):
-            id.append(obj.id)
-    print(id)
-
-    queryset = Notes.objects.filter(id__in=id)
-    return queryset
+            nid.append(obj.note_id)
+    print(nid)
+    queryset = Notes.objects.all().filter(note_id__in=nid)
+    print(queryset.count())
+    return HttpResponse(queryset,content_type="application/json")
 
 
 def user_activity(request):
