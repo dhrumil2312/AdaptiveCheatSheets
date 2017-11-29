@@ -111,8 +111,8 @@ ul#notesContainer li {
   box-sizing: content-box;
   margin: 1em;
   padding: 1em 1em 1em 1em;
-  width: 14em;
-  height: 15em;
+  width: 20em;
+  height: 20em;
   list-style-type: none;
   background-color: #FFC;
   color: #444;
@@ -174,7 +174,7 @@ ul#notesContainer a.editNote,
 ul#notesContainer a.deleteNote {
   position: absolute;
   bottom: 0em;
-  font-size: 0.75em;
+  font-size: 2em;
   line-height: 1.61803398875em;
 }
 ul#notesContainer a.editNote {right: 1.75em;}
