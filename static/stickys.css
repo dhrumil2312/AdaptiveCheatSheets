@@ -54,6 +54,7 @@ body{
   font-size: 1em;
   line-height: 1.61803398875em;
   font-weight: normal;
+  background-image: url("/static/img/background.png");
 
 }
 strong {font-weight: bold;}
@@ -103,19 +104,19 @@ strong {font-weight: bold;}
 /*
  * The Notes
  */
-ul#notesContainer {margin: 2em 0 0 6em;}
+ul#notesContainer {margin: 6em 0 0 6em;}
 ul#notesContainer li {
   position: relative;
   float: left;
   box-sizing: content-box;
   margin: 1em;
-  padding: 0 1em 1em 1em;
-  width: 14em;
-  height: 15em;
+  padding: 1em 1em 1em 1em;
+  width: 20em;
+  height: 20em;
   list-style-type: none;
   background-color: #FFC;
   color: #444;
-  font-family: BloklettersBalpen;
+  font-family: 'Comfortaa', cursive;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
   z-index: 1;
 
@@ -173,7 +174,7 @@ ul#notesContainer a.editNote,
 ul#notesContainer a.deleteNote {
   position: absolute;
   bottom: 0em;
-  font-size: 0.75em;
+  font-size: 2em;
   line-height: 1.61803398875em;
 }
 ul#notesContainer a.editNote {right: 1.75em;}
@@ -237,7 +238,7 @@ ul#notesContainer li p.noteDate {
 .tooltip:hover::after {bottom: 1.375em;}
 #trashBin {
   position: fixed;
-  bottom: 0;
+  right: 0;
 }
 #trashBin a {position: relative;}
 #trashBin span.recycleCount {
@@ -327,7 +328,7 @@ form p.closeFormIcon a {
 form p.closeFormIcon a:hover, form p.closeFormIcon a:active {color: #D74C47;}
 textarea {width: 100%;}
 input[type="text"] {width: 100%;}
-#cancelButton {margin-left: 1em;}
+#newnotebutton {margin-left: 1em;}
 /* Rewrite Some Twitter Bootstrap Settings */
 form {
   width: 50%;
@@ -374,10 +375,11 @@ div.recycleBin div.rbHeadingWrapper {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4c47', endColorstr='#3d3c38',GradientType=0 );
 }
 div.recycleBin h1 {
-  margin: 0;
+  margin-right: 3em;
   padding: 0 0 0 3em;
-  color: #DFDBD2;
-  background-image: url("/static/img/recycle-earth.png");
+  text-align: right;
+  color: white;
+  background-image: url("/static/img/bin.png");
   background-repeat: no-repeat;
   background-position: 0.5em center;
 }

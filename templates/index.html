@@ -10,11 +10,11 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %} " type="image/x-icon"/>
     <link rel="icon" href="{% static  'favicon.ico' %}" type="image/x-icon"/>
 
-    <title>Sticky Notes</title>
+    <title>Adaptive Note App</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- scripts -->
     <script src="{% static 'jquery.min.js' %}"></script>
@@ -31,54 +31,55 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href={% static "fonts/font-awesome/css/font-awesome.min.css"%}>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+{#    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>#}
 </head>
 
 <body ng-controller="NotesController">
 
 <!-- Navigation, User Control Panel -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"> Adaptive Cheat Sheets </a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li accesskey="n" ng-click="showAddNoteForm()">
-                <a ng-click="showAddNoteForm()"> New Sticky Note </a></li>
-            <li accesskey="h" ng-click="toggleHelp()">
-                <a class="icon icon-help" ng-click="toggleHelp()"> Help </a></li>
-
-            <li id="trashBin" accesskey="r" ng-click="toggleRecycleBin()">
-                <a class="icon icon-trash" ng-click="toggleRecycleBin()">
-                    <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span></a></li>
-        </ul>
-        <div class="col-sm-3 col-md-3">
-            <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="object"
-                           id="object" onkeyup="searchOpen()">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"> Adaptive Cheat Sheets </a>
     </div>
+    <ul class="nav navbar-nav">
+        <li ng-click="showAddNoteForm()">
+        <a class="icon fa fa-plus" ng-click="showAddNoteForm()"> Add Note </a></li>
+        <li  ng-click="toggleHelp()">
+        <a class="icon fa fa-info" ng-click="toggleHelp()"> Help </a></li>
+        <li ng-click="toggleRecycleBin()">
+        <a class="icon fa fa-recycle" ng-click="toggleRecycleBin()">
+            <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span>Recycle Bin</a></li>
+    </ul>
+      <div class="col-sm-3 col-md-3">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="object"
+                   id="object" onkeyup="searchOpen()" >
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+  </div>
 </nav>
 
 <!-- the notes -->
+
 <ul class="clearfix" id="notesContainer">
-    <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-        <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-        <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
+    <li ng-repeat="note in notes | limitTo:40" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
+        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         <h1 ng-bind="note.title"></h1>
-        <p ng-bind="note.content"></p>
-        <div>
-            <button ng-bind="note.tag"></button>
-        </div>
+        <div><button ng-bind="note.tag"></button></div>
+        <p ng-bind="note.content">{{ note.content }}</p>
+
     </li>
 </ul>
 
@@ -98,7 +99,7 @@
         <!-- note body textarea -->
         <div class="control-group">
             <label class="control-label" for="noteMessage">Note</label>
-            <div class="controls"><textarea rows="5" id="noteMessage" ng-model="noteMessage"></textarea></div>
+            <div class="controls"><textarea rows="5" id="noteMessage" ng-model="noteMessage" ></textarea></div>
         </div>
 
         <!-- Tag textbox -->
@@ -106,16 +107,13 @@
             <label class="control-label" for="noteTitle">Tags</label>
             <div class="controls"><input type="text" id="noteTags" ng-model="noteTags" placeholder="Tags"/></div>
         </div>
+{#        add new way to add tags, commented tags script#}
 
         <!-- submit button -->
         <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn btn-primary"><span aria-hidden="true"
-                                                                    class="icon-new"></span>
-                    <button ng-bind="submitButton"></button>
-                    <button type="button" class="btn btn-danger" id="cancelButton" ng-click="closeAddNoteForm()"><span
-                            aria-hidden="true" class="icon-cancel"></span> Cancel
-                    </button>
+            <div class="controls" style="text-align: center;"><br>
+                <button type="submit" class="btn btn-primary" id="newnotebutton" ng-click ="flashSuccessSave()"><span aria-hidden="true" class="icon-new"></span>  Submit </button>
+                <button type="button" class="btn btn-danger" id="newnotebutton" ng-click="closeAddNoteForm()"><span aria-hidden="true" class="icon-cancel"></span>  Cancel </button>
             </div>
         </div>
     </form>
@@ -128,8 +126,8 @@
         <p class="closeRecycleBinIconWrapper"><a class="icon-cancel" ng-click="toggleRecycleBin()"></a></p>
     </div>
     <div class="rbContentWrapper">
-        <button type="button" class="btn" ng-click="selectAll()" ng-disabled="rbSelect" ng-bind="rbSelectBtn"><span
-                class="icon-checkbox"></span></button>
+        <button type="button" class="btn" ng-click="selectAll()"  ng-bind="rbSelectBtn"><span
+                class="icon-checkbox"></span> </button>
         <button type="button" class="btn" ng-disabled="rbChildBtns" ng-click="permDelNotes()"><span
                 class="icon-trash-skinny"></span> Delete
         </button>
@@ -165,68 +163,96 @@
         <p class="closeHelpIconWrapper"><a class="icon-cancel" ng-click="toggleHelp()"></a></p>
     </div>
 
+
+    <li ng-repeat="note in notes" >
+        <label>{{ note.content }}</label>
+        <label>new content</label>
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+    </li>
+
+
     <article>
         <!-- Creating a new Sticky Note -->
-        <h2>Most upvoted notes</h2>
-        <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in upvotednotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-                <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-                <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-                <h1 ng-bind="note.title"></h1>
-                <p ng-bind="note.content"></p>
-                <div>
-                    <button ng-bind="note.tag"></button>
-                </div>
-            </li>
-        </ul>
-
+        <h2>Creating a New Sticky Note</h2>
+        <div>
+            <ol>
+                <li>
+                    Click on the "<strong>New Sticky Note</strong>" icon, you will then be
+                    presented with a form to enter the notes details.
+                </li>
+                <li>
+                    In the field labeled "<strong>Note</strong>" is where you can type the
+                    body of the note.
+                </li>
+                <li>
+                    You can optionally give your note a title by typing into the field that
+                    is labeled "<strong>Title</strong>".
+                </li>
+                <li>
+                    Once you are finished typing the title of the note, you can simply press
+                    the "<strong>enter</strong>" key on your keyboard or click on the
+                    "<strong>Add</strong>" button.
+                </li>
+                <li>
+                    After either pressing the "<strong>enter</strong>" key or clicking on
+                    the "<strong>Add</strong>" button, you will be presented with a message
+                    letting you know that your note has been successfully added and the
+                    form will remove itself from the screen.
+                </li>
+            </ol>
+        </div>
 
         <!-- Updating a Sticky Note -->
-        <h2>Most Trending notes</h2>
+        <h2>Updating a Sticky Note</h2>
         <div>
-            <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in upvotednotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-                <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-                <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-                <h1 ng-bind="note.title"></h1>
-                <p ng-bind="note.content"></p>
-                <div>
-                    <button ng-bind="note.tag"></button>
-                </div>
-            </li>
-        </ul>
+            <p>
+                From time to time you may find it useful to update a sticky note
+                that you have previously created. To update a sticky note:
+            </p>
+            <ol>
+                <li>
+                    <strong>Click on the edit icon</strong> located on the sticky note
+                    that you wish to update.
+                </li>
+                <li>
+                    Upon clicking the edit icon, you will be presented with a form that
+                    will allow you to edit the notes message and title.
+                </li>
+            </ol>
         </div>
 
         <!-- Deleting a Sticky Note -->
-        <h2>Notes that you may like</h2>
+        <h2>Deleting a Sticky Note</h2>
         <div>
-           <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-                <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-                <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-                <h1 ng-bind="note.title"></h1>
-                <p ng-bind="note.content"></p>
-                <div>
-                    <button ng-bind="note.tag"></button>
-                </div>
-            </li>
-        </ul>
+            <p>
+                To delete a sticky note is to simply <strong>click the delete icon</strong>
+                located <strong>on the sticky note</strong> itself.
+            </p>
         </div>
 
         <!-- Sorting Notes -->
-        <h2>Most recent notes</h2>
+        <h2>Moving Notes Around</h2>
         <div>
-             <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-                <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-                <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
-                <h1 ng-bind="note.title"></h1>
-                <p ng-bind="note.content"></p>
-                <div>
-                    <button ng-bind="note.tag"></button>
-                </div>
-            </li>
-        </ul>
+            <p>
+                By default when you create a new note, the sticky note is placed on
+                the screen after all the other notes. This default sequence will keep
+                your notes in chronological order. However, there may be times when
+                you wish to move a sticky note to a different position or to arrange
+                your notes by a different criteria other then the date. To move a note:
+            </p>
+            <ol>
+                <li><strong>Click and drag</strong> the note you wish to move.</li>
+                <li>
+                    As you are dragging a note around the screen, the other notes will
+                    start sliding left or right creating a space for you to place the
+                    note that is being dragged.
+                </li>
+                <li>
+                    Once the note is in the desired position, simply <strong>drop the
+                    note</strong> into its new location.
+                </li>
+            </ol>
         </div>
 
 
@@ -247,13 +273,8 @@
         <hr/>
 
         <p>
-            Designed and maintained by
-            <a href="https://github.com/spdrcr78" rel="author">Michael Clune</a>
-            and <a href="https://github.com/ScottSolomko" rel="author">Scott Solomko</a>.
-            This web app is an open source project and is freely available for
-            <a href="https://github.com/ScottSolomko/McSas-Sticky-Notes">download on GitHub</a>.
-            We created McSas Sticky Notes entirely with other freely available software,
-            most of which is also open source.
+            Completed as part of ASU CSE: Adaptive Web Project.<br>
+            Members: Prit Seth, Pravin Chaudhary, Dhrumil Parmar, Jainesh Kothari
         </p>
 
     </article>
@@ -272,25 +293,25 @@
 
 <script>
 
-    function searchOpen() {
-        var search = $('#object').val();
-        var data = {
-            search: search
-        };
-        $.ajax({
-            url: '/api/autocomplete/',
-            data: data,
-            dataType: 'jsonp',
-            jsonp: 'callback',
-            jsonpCallback: 'searchResult'
-        });
-    }
+   function searchOpen() {
+    var search = $('#object').val();
+    var data = {
+        search: search
+    };
+    $.ajax({
+        url: '/api/autocomplete/',
+        data: data,
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        jsonpCallback: 'searchResult'
+    });
+}
 
 
-    function searchResult(data) {
-        $("#object").autocomplete({
-            source: data
-        });
-    }
+function searchResult(data) {
+    $( "#object" ).autocomplete ({
+        source: data
+    });
+}
 </script>
 </html>
