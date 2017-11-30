@@ -33,3 +33,12 @@ update( select  upvote old , row_number() over(order by 1) new from "AdaptiveChe
 
 insert into "AdaptiveCheatSheet_useractivity" ( user_id, note_id, upvote, downvote, notes_shared, note_access, tags)
 select author_id , note_id , 1 , 1, 1, 23 , tag from "AdaptiveCheatSheet_notes" where author_id = 2;
+
+update "AdaptiveCheatSheet_notes" set "downvote" = "downvote" - 25 where "tag" like '%SQL%';
+
+update "AdaptiveCheatSheet_notes" set "downvote" = "downvote" * -1 where "tag" like '%SQL%' and "downvote" < 0;
+
+select * from "AdaptiveCheatSheet_notes" where tag like '%SQL%';
+
+
+delete from "AdaptiveCheatSheet_notes" where id in (569,207, 563)
