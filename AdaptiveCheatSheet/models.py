@@ -29,6 +29,6 @@ class useractivity(models.Model):
     note_id = models.IntegerField()
     upvote = models.IntegerField()
     downvote = models.IntegerField()
-    notes_shared = models.BooleanField()
-    post_shared = models.BooleanField()
+    notes_shared = models.IntegerField()
     note_access = models.IntegerField()
+    tags = models.CharField(max_length=1000)
