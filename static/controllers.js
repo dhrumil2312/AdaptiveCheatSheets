@@ -65,7 +65,7 @@ mcsas.controller('NotesController', function ($scope, $http) {
 
         var noteData = {"title": $scope.noteTitle, "tags": $scope.noteTags, "content": $scope.noteMessage};
         $scope.notes.push(noteData);
-        console.log("notedata is : ", noteData);
+        console.log("new notedata is : ", noteData);
         $http({
             url: '/addnotes/',
             method: 'POST',
@@ -77,8 +77,9 @@ mcsas.controller('NotesController', function ($scope, $http) {
         notesContainer.sortable('refresh');
         $scope.noteMessage = '';
         $scope.noteTitle = '';
+        $scope.noteTags = '';
         this.flashSuccessSave();
-    }
+    };
 
     $scope.editNote = function () {
         var len = $scope.notes.length;

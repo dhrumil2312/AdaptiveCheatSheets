@@ -5,15 +5,15 @@ var myapp = angular.module('myapp', ["highcharts-ng"]);
 myapp.controller('AllActivityController', function ($scope, $http, $window) {
 
     $scope.initForActivity = function () {
-        $http.defaults.useXDomain = true;
-        delete $http.defaults.headers.common['X-Requested-With'];
+        // $http.defaults.useXDomain = true;
+        // delete $http.defaults.headers.common['X-Requested-With'];
         var service = [];
         $http({
-            url: 'http://localhost:8989/userProfile/counter/',
+            url: '/userProfile/null/counter',
             method: 'GET'
         }).success(function (response) {
             service = response;
-            console.log(service);
+            console.log("userprofile counter server", service);
 
             var userData = [];
             //Have to update the chart series data:
@@ -27,13 +27,8 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
         //Call for All user
 
         $http({
-            url: 'http://localhost:8989/userProfile/allUser/counter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
+            url: '/userProfile/allUser/counter/',
+            method: 'GET'
         }).success(function (response) {
             service = response;
 
@@ -109,13 +104,8 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
         var newUser = $scope.newUser;
 
         $http({
-            url: 'http://localhost:8989/userProfile/' + newUser + '/counter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
+            url: '/userProfile/' + newUser + '/counter',
+            method: 'GET'
         }).success(function (response) {
             var service = response;
             console.log(service, "add series call response of qwe");
@@ -619,42 +609,28 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 
         var newUser = $scope.newUser;
 
-        $http({
-            url: 'http://localhost:8989/userProfile/' + newUser + "" + '/topicCounter',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            var service = response;
-            console.log(service, "add series call response of qwe");
 
-            var userData = [];
-            // var topics = [];
+        $http.get('../static/jsonData/newTopicCounter.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "add series call response of new user topic");
 
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                userData.push(service[i].counter);
-                // topics.push(service[i].topic);
-            }
+                var userData = [];
+                for (var i = 0; i < service.length; i++) {
+                    userData.push(service[i].counter);
+                }
 
-            var sId = 'series of' + newUser + seriesId++;
-            $scope.chartConfig.series.push({
-                data: userData,
-                "name": "User Activity : " + newUser,
-                id: sId
+                var sId = 'series of' + newUser + seriesId++;
+                $scope.chartConfig.series.push({
+                    data: userData,
+                    "name": "User Activity : " + newUser,
+                    id: sId
+                });
+
             });
-        });
 
     };
 
-    $scope.removeRandomSeries = function () {
-        var seriesArray = $scope.chartConfig.series;
-        var rndIdx = Math.floor(Math.random() * seriesArray.length);
-        seriesArray.splice(rndIdx, 1);
-    };
 
     $scope.removeSeries = function (id) {
         var seriesArray = $scope.chartConfig.series;
