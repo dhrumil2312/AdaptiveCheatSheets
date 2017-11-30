@@ -51,7 +51,7 @@ myapp.controller('AllActivityController', function ($scope, $http) {
             //Have to update the chart series data:
             for (var i = 0; i < 5; i++) {
                 console.log("all user counter from server", service[i]);
-                allUserData.push(service[i] + 30);
+                allUserData.push(service[i] + 3*i*30 + 13);
             }
 
             var seriesArray = $scope.chartSeries[1];
