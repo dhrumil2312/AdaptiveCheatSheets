@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^logout/', views.login),
     url(r'^register/', views.register),
     url(r'^login/', views.login),
+    url(r'^personal/', views.personal),
     url(r'^addnotes/', views.save_note ),
     url(r'^getnotes/', views.get_notes ),
     url(r'^getnotesbytag/', views.get_notes_bytag),

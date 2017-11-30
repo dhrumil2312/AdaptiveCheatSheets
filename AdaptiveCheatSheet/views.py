@@ -15,6 +15,27 @@ import requests
 from elasticsearch import Elasticsearch
 
 
+def useractivity(request):
+    username = request.session['username']
+    id = request.session['id']
+
+    a= "select user_id , sum(upvote) upvote_sum  , sum(downvote) downvote_sum , sum(notes_shared) notes_shared_sum , sum(note_access) note_access_sum from \"AdaptiveCheatSheet_useractivity\" where user_id = 1 GROUP BY  user_id;"
+    cursor = connection.cursor()
+    _ = cursor.execute(a)
+    rows = cursor.fetchall()
+    context = {}
+    for row in rows:
+        context = {
+            'user_id': row[0],
+            'upvote_sum': row[1],
+            'downvote_sum': row[2],
+            'notes_shared_sum': row[3],
+            'note_access_sum' : row[4]
+        }
+    return HttpResponse(context,content_type="application/json")
+    pass
+
+
 def get_notes_bytag(request):
     cursor = connection.cursor()
     username = request.session['username']
@@ -119,6 +140,11 @@ def logout(request):
     temp = loader.get_template('login.html')
     return HttpResponse(temp.render({},request))
 
+def personal(request):
+    if request.method == 'GET':
+        return render(request,'personal.html',{})
+
+
 def login(request):
     if request.method == 'GET':
         return render(request,'login.html',{})
@@ -132,7 +158,14 @@ def login(request):
                 request.session['username']= user_enter.username
                 username = request.session['username']
                 temp  = loader.get_template('index.html')
-                get_notes_bytag(request)
+                #get_notes_bytag(request)
+                a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
+                cursor = connection.cursor()
+                useractivity(request)
+                _ = cursor.execute(a)
+                rows = cursor.fetchall()
+                id = rows[0][0]
+                request.session['id'] = id
                 context = {
                        'Username' : username,
                 }
