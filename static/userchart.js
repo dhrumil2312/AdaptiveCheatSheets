@@ -2,7 +2,7 @@
 
 var myapp = angular.module('myapp', ["highcharts-ng"]);
 
-myapp.controller('AllActivityController', function ($scope, $http, $window) {
+myapp.controller('AllActivityController', function ($scope, $http) {
 
     $scope.initForActivity = function () {
         // $http.defaults.useXDomain = true;
@@ -12,32 +12,47 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
             url: '/userProfile/null/counter',
             method: 'GET'
         }).success(function (response) {
-            service = response;
-            console.log("userprofile counter server", service);
+
+            console.log("userprofile counter from server", response);
+            console.log("userprofile counter from server", response.upvote_sum);
+            service.push(response.upvote_sum);
+            service.push(response.downvote_sum);
+            service.push(response.notes_shared_sum);
+            service.push(response.note_access_sum);
+            service.push(10);
+
 
             var userData = [];
             //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                userData.push(service[i].activityCounter);
+            for (var i = 0; i < 5; i++) {
+                console.log("userprofile counter from server", service[i]);
+                userData.push(service[i]);
+            }
 
             var seriesArray = $scope.chartSeries[0];
             seriesArray.data = userData;
         });
 
         //Call for All user
-
+        service = [];
         $http({
             url: '/userProfile/allUser/counter/',
             method: 'GET'
         }).success(function (response) {
-            service = response;
 
-            console.log(service);
+            console.log("userprofile counter from server", response);
+            service.push(response.upvote_sum + 10);
+            service.push(response.downvote_sum + 10);
+            service.push(response.notes_shared_sum + 10);
+            service.push(response.note_access_sum + 10);
+            service.push(40);
 
             var allUserData = [];
             //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                allUserData.push(service[i].activityCounter);
+            for (var i = 0; i < 5; i++) {
+                console.log("all user counter from server", service[i]);
+                allUserData.push(service[i] + 30);
+            }
 
             var seriesArray = $scope.chartSeries[1];
             console.log(seriesArray, "new series array users ");
@@ -48,7 +63,7 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
 
     $scope.chartSeries = [
         {
-            "name": " User Activity : " + "jack",
+            "name": " User Activity : " + "current user",
             "data": [],
             connectNulls: true,
             id: 'User Activity Counter'
@@ -197,7 +212,7 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
         },
 
         xAxis: {
-            categories: ['Clicked On Hyperlink', 'Read whole page', 'Post Shared', 'Question Upvoted', 'Question Downvoted', 'Answer Upvoted', 'Answer Downvoted', 'Highlighted Text', 'Clicked on Question', 'Clicked on Answer'],
+            categories: ['upvote count', 'downvote count', 'Notes Shared', ' Access count ', 'highlighted activity count'],
             title: {
                 text: null
             },
@@ -223,7 +238,7 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
 myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
 
-    var username = "jack";
+    var username = "current user";
 
 
     //To load the data of the logged in user.
@@ -468,7 +483,7 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 
 
     // var username = $window.sessionStorage.getItem("username");
-    var username = "jack";
+    var username = "current user";
 
 
     $scope.initForLoginActivity = function () {

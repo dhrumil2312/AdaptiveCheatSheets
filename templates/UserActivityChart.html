@@ -16,6 +16,8 @@
 <body>
 <h2>User Activity Graph</h2>
 
+
+
 <div ng-app="myapp">
     <!--All Activity Chart for plotting login activities with respect to activity type-->
 
@@ -76,11 +78,6 @@
                 <div class="row-fluid">
                     <input type="text" placeholder="New Username" ng-model="newUser"/>
                     <button ng-click="addSeries()">Add Graph of User</button>
-                </div>
-
-                <div class="row-fluid">
-                    <input type="text" placeholder="Year filter" ng-model="year"/>
-                    <button ng-click="addSeriesOfYear()">Get graph of this year</button>
                 </div>
 
                 <div class="row-fluid">Default Type <select ng-model="chartConfig.chart.type"
