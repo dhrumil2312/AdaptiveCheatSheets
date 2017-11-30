@@ -40,55 +40,56 @@
 
 <!-- Navigation, User Control Panel -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/adaptivecheatsheet"> Adaptive Cheat Sheets </a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li>
-                <a class="icon fa fa-user" href="/personal"> My Notes </a></li>
-            <li ng-click="showAddNoteForm()">
-                <a class="icon fa fa-plus" ng-click="showAddNoteForm()"> Add Note </a></li>
-            <li><a href="/useractivity"> Dashboard </a></li>
-            <li ng-click="toggleHelp()">
-                <a class="icon fa fa-info" ng-click="toggleHelp()"> Help </a></li>
-            <li ng-click="toggleRecycleBin()">
-                <a class="icon fa fa-recycle" ng-click="toggleRecycleBin()">
-                    <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span>Recycle Bin</a></li>
-        </ul>
-        <div class="col-sm-3 col-md-3">
-            <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="object"
-                           id="object" onkeyup="searchOpen()">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/adaptivecheatsheet"> Adaptive Cheat Sheets </a>
     </div>
+    <ul class="nav navbar-nav">
+        <li >
+        <a target="_blank" class="icon fa fa-user" href="/personal" > My Notes </a></li>
+        <li ng-click="showAddNoteForm()">
+        <a class="icon fa fa-plus" ng-click="showAddNoteForm()"> Add Note </a></li>
+        <li  ng-click="toggleHelp()">
+        <a class="icon fa fa-quote-right" ng-click="toggleHelp()"> Trending </a></li>
+        <li ng-click="toggleRecycleBin()">
+        <a class="icon fa fa-recycle" ng-click="toggleRecycleBin()">
+            <span class="recycleCount" ng-model="recycle">{{ recycle.length }}</span>Recycle Bin</a></li>
+    </ul>
+      <div class="col-sm-3 col-md-3">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="object"
+                   id="object" onkeyup="searchOpen()" >
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a target ="_blank" href="/useractivity" > <span class="icon fa fa-area-chart "></span>Dashboard </a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+  </div>
 </nav>
 
 <!-- the notes -->
 
 <ul class="clearfix" id="notesContainer">
     <li ng-repeat="note in notes | limitTo:40" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
-        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
-        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
+
         <h1 ng-bind="note.title"></h1>
-        <div>
-            <button ng-bind="note.tag"></button>
+        <div><button ng-bind="note.tag"></button>
+         <p><a class="upvoteNote fa fa-thumbs-up fa-2x"  ng-click="upVote()" ng-bind="note.upvote"></a></p>
+        <p><a class="downvoteNote fa fa-thumbs-down fa-2x"  ng-click="downVote()" ng-bind="note.downvote"></a></p>
+        <p><a class="shareNote fa fa-share fa-2x"  ng-click="shareNote()"></a></p>
+{#        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>#}
+        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
         </div>
         <p ng-bind="note.content">{{ note.content }}</p>
 
     </li>
 </ul>
-
 <!-- Add note form -->
 <div class="formWrapper" id="formWrapper">
     <form class="form-horizontal" ng-submit="submitNote()">
