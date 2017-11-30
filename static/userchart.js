@@ -336,69 +336,29 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
     //Adding the series of new user
     $scope.addSeries = function () {
 
+
         var newUser = $scope.newUser;
-        var newYear = $scope.year;
 
-        if (newYear == undefined)
-            newYear = '2017';
 
-        $http({
-            url: 'http://localhost:8989/userProfile/' + newUser + "/" + newYear + '/loginCounter',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            var service = response;
-            console.log(service, "add series call response of qwe");
+        $http.get('../static/jsonData/newLoginUserCounter.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "add series call response of qwe");
 
-            var userData = [];
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                userData.push(service[i].loginCounter);
+                var userData = [];
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++)
+                    userData.push(service[i].loginCounter);
 
-            var sId = 'series of' + "qwe" + seriesId++;
-            $scope.chartConfig.series.push({
-                data: userData,
-                "name": "User Activity : " + newYear + " : " + newUser,
-                id: sId
+                var sId = 'series of' + "qwe" + seriesId++;
+                $scope.chartConfig.series.push({
+                    data: userData,
+                    "name": "User Activity : " + newYear + " : " + newUser,
+                    id: sId
+                });
+
             });
-        });
-
     };
-
-    $scope.addSeriesOfYear = function () {
-
-
-        $http({
-            url: 'http://localhost:8989/userProfile/' + username + "/" + $scope.year + '/loginCounter',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            var service = response;
-            console.log(service, "add series new year");
-
-            var userData = [];
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                userData.push(service[i].loginCounter);
-
-            var sId = 'series of' + "qwe" + seriesId++;
-            $scope.chartConfig.series.push({
-                data: userData,
-                "name": "User Activity of year : " + $scope.year + " " + username,
-                id: sId
-            });
-        });
-
-    };
-
 
     $scope.removeRandomSeries = function () {
         var seriesArray = $scope.chartConfig.series;
