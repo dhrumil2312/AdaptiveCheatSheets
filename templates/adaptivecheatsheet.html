@@ -74,5 +74,34 @@
 </nav>
 
 <!-- the notes -->
+
+<ul class="clearfix" id="notesContainer">
+    <li ng-repeat="note in javascriptnotes | limitTo:40" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
+        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
+        <h1 ng-bind="note.title"></h1>
+        <div>
+            <button ng-bind="note.tag"></button>
+        </div>
+        <p ng-bind="note.content">{{ note.content }}</p>
+
+    </li>
+</ul>
+
+
+
+<ul class="clearfix" id="notesContainer">
+    <li ng-repeat="note in sqlnotes | limitTo:40" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+        <p><a class="editNote fa fa-pencil-square fa-2x" title="edit" ng-click="showEditNoteForm(note)"></a></p>
+        <p><a class="deleteNote fa fa-trash fa-2x" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
+        <h1 ng-bind="note.title"></h1>
+        <div>
+            <button ng-bind="note.tag"></button>
+        </div>
+        <p ng-bind="note.content">{{ note.content }}</p>
+
+    </li>
+</ul>
+
 </body>
 </html>
