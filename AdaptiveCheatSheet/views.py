@@ -11,7 +11,7 @@ from django.db import connection
 from django.views.generic.base import RedirectView
 import  json
 from django.db import  connection
-import requests
+#import requests
 from elasticsearch import Elasticsearch
 
 
@@ -161,7 +161,6 @@ def login(request):
                 #get_notes_bytag(request)
                 a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
                 cursor = connection.cursor()
-                useractivity(request)
                 _ = cursor.execute(a)
                 rows = cursor.fetchall()
                 id = rows[0][0]
