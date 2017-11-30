@@ -20,7 +20,7 @@
     <script src="{% static 'jquery.min.js' %}"></script>
     <script src="{% static 'jquery-ui.min.js' %}"></script>
     <script src="{% static 'angular.min.js' %}"></script>
-    <script src="{% static 'controllers.js' %}"></script>
+    <script src="{% static 'controller2.js' %}"></script>
     <script src="{% static 'effects.js' %}"></script>
 
     <!-- styles -->
@@ -45,8 +45,6 @@
       <a class="navbar-brand" href="#"> Adaptive Cheat Sheets </a>
     </div>
     <ul class="nav navbar-nav">
-        <li ng-click="showAddNoteForm()">
-        <a class="icon fa fa-user" ng-click="showAddNoteForm()"> My Notes </a></li>
         <li ng-click="showAddNoteForm()">
         <a class="icon fa fa-plus" ng-click="showAddNoteForm()"> Add Note </a></li>
         <li  ng-click="toggleHelp()">

@@ -140,6 +140,11 @@ def logout(request):
     temp = loader.get_template('login.html')
     return HttpResponse(temp.render({},request))
 
+def personal(request):
+    if request.method == 'GET':
+        return render(request,'personal.html',{})
+
+
 def login(request):
     if request.method == 'GET':
         return render(request,'login.html',{})
