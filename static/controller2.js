@@ -14,7 +14,7 @@ mcsas.controller('NotesController', function ($scope, $http) {
         //Get all notes for user
         var userNotes = [];
         $http({
-            url: '/getnotesbyid/',
+            url: '/getnotes/',
             method: 'GET'
         }).success(function (response) {
             console.log("all user notes", response);
