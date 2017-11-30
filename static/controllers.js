@@ -14,46 +14,6 @@ mcsas.controller('NotesController', function ($scope, $http) {
     $scope.likenotes = [];
     $scope.recentnotes = [];
 
-    $http.get('../static/jsonData/AdaptiveCheatSheetData.json')
-        .then(function (jsonData) {
-            var service = jsonData.data;
-            console.log(service, "upvoted notes");
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                $scope.upvotednotes.push(service[i].fields);
-            }
-        });
-
-    $http.get('../static/jsonData/trendingNotes.json')
-        .then(function (jsonData) {
-            var service = jsonData.data;
-            console.log(service, "trendingnotes ");
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                $scope.trendingnotes.push(service[i].fields);
-            }
-        });
-
-    $http.get('../static/jsonData/likeNotes.json')
-        .then(function (jsonData) {
-            var service = jsonData.data;
-            console.log(service, "likenotes notes");
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                $scope.likenotes.push(service[i].fields);
-            }
-        });
-
-    $http.get('../static/jsonData/recentNotes.json')
-        .then(function (jsonData) {
-            var service = jsonData.data;
-            console.log(service, "recentnotes notes");
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                $scope.recentnotes.push(service[i].fields);
-            }
-        });
-
     $scope.notes = [];
     $scope.initForActivity = function () {
         //Get all notes for user
@@ -69,7 +29,53 @@ mcsas.controller('NotesController', function ($scope, $http) {
             }
         });
         console.log("all scope notes from server", $scope.notes);
+
+
+        $http.get('../static/jsonData/AdaptiveCheatSheetData.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "upvoted notes");
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    $scope.upvotednotes.push(service[i]);
+                }
+            });
+
+        $http.get('../static/jsonData/trendingNotes.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "trendingnotes ");
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    $scope.trendingnotes.push(service[i]);
+                }
+            });
+
+        $http.get('../static/jsonData/likeNotes.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "likenotes notes");
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    $scope.likenotes.push(service[i]);
+                }
+            });
+
+        $http.get('../static/jsonData/recentNotes.json')
+            .then(function (jsonData) {
+                var service = jsonData.data;
+                console.log(service, "recentnotes notes");
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    $scope.recentnotes.push(service[i]);
+                }
+            });
+
+
     };
+
+    console.log($scope.recentnotes, "new updated recent notes");
+
 
     $scope.initForActivity();
     var notesContainer;
@@ -141,7 +147,6 @@ mcsas.controller('NotesController', function ($scope, $http) {
         $scope.noteTitle = '';
         $scope.noteId = 0;
 
-        // localStorage.setItem('notes', JSON.stringify($scope.notes));
         notesContainer.sortable('refresh');                             // not sure if this call is required
         this.flashSuccessSave();
     }

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
 from . import views
 
 urlpatterns = [
@@ -24,11 +25,11 @@ urlpatterns = [
     url(r'^register/', views.register),
     url(r'^login/', views.login),
     url(r'^personal/', views.personal),
-    url(r'^addnotes/', views.save_note ),
-    url(r'^getnotes/', views.get_notes ),
+    url(r'^addnotes/', views.save_note),
+    url(r'^getnotes/', views.get_notes),
     url(r'^getnotesbytag/', views.get_notes_bytag),
     url(r'^useractivity/', views.user_activity),
-url(r'^userProfile/(?P<username>.*)/counter', views.dashboard),
-    url(r'^api/autocomplete/' , views.elastic),
-url(r'^adaptivecheatsheet/' , views.adaptive)
+    url(r'^userProfile/(?P<username>.*)/counter', views.dashboard),
+    url(r'^api/autocomplete/', views.elastic),
+    url(r'^adaptivecheatsheet/', views.adaptive)
 ]
