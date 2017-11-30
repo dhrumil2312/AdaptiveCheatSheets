@@ -26,12 +26,31 @@ def dashboard(request , username= 'null'):
     if username == 'null':
         username = request.session['username']
         id = request.session['id']
+
+    elif username == 'allUser':
+        a = "select sum(upvote) upvote_sum  , sum(downvote) downvote_sum , sum(notes_shared) notes_shared_sum , sum(note_access) note_access_sum from \"AdaptiveCheatSheet_useractivity\""
+        cursor = connection.cursor()
+        _ = cursor.execute(a)
+        rows = cursor.fetchall()
+        context = {}
+        for row in rows:
+            context = {
+                'upvote_sum': row[0],
+                'downvote_sum': row[1],
+                'notes_shared_sum': row[2],
+                'note_access_sum': row[3]
+            }
+
+        print(context)
+        return HttpResponse(context, content_type="application/json")
+
     else:
         a = "select 1 as id from \"AdaptiveCheatSheet_user\" where username = '%s' " % (username)
         cursor = connection.cursor()
         _ = cursor.execute(a)
         rows = cursor.fetchall()
         id = rows[0][0]
+
     print('Here!!!!!!!!!!!')
     print(username)
     a= "select user_id , sum(upvote) upvote_sum  , sum(downvote) downvote_sum , sum(notes_shared) notes_shared_sum , sum(note_access) note_access_sum from \"AdaptiveCheatSheet_useractivity\" where user_id = 1 GROUP BY  user_id;"
@@ -47,24 +66,11 @@ def dashboard(request , username= 'null'):
             'notes_shared_sum': row[3],
             'note_access_sum' : row[4]
         }
+    print(context)
     return HttpResponse(context,content_type="application/json")
 
-def all_users_dashboard(request):
-    a = "select sum(upvote) upvote_sum  , sum(downvote) downvote_sum , sum(notes_shared) notes_shared_sum , sum(note_access) note_access_sum from \"AdaptiveCheatSheet_useractivity\""
-    cursor = connection.cursor()
-    _ = cursor.execute(a)
-    rows = cursor.fetchall()
-    context = {}
-    for row in rows:
-        context = {
-            'upvote_sum': row[0],
-            'downvote_sum': row[1],
-            'notes_shared_sum': row[2],
-            'note_access_sum': row[3]
-        }
-    return HttpResponse(context, content_type="application/json")
 
-    pass
+
 
 
 def get_notes_bytag(request):
