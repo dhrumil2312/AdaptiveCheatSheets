@@ -562,7 +562,7 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
                 var topics = [];
                 //Have to update the chart series data:
                 for (var i = 0; i < service.length; i++) {
-                    allUserData.push(service[i].counter);
+                    allUserData.push(service[i].globalCounter);
                     topics.push(service[i].topic);
                 }
 
@@ -742,6 +742,7 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 
 });
 
+/*
 
 myapp.controller('PercentageTopicController', function ($scope, $http, $window) {
 
@@ -992,3 +993,4 @@ myapp.controller('PercentageTopicController', function ($scope, $http, $window) 
 
 });
 
+*/

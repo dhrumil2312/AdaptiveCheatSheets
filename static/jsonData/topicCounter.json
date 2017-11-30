@@ -6,33 +6,33 @@
   },
   {
     "topic": "layout-manager",
-    "counter": 0,
+    "counter": 40,
     "globalCounter": 216
   },
   {
     "topic": "spring-mvc",
     "counter": 0,
-    "globalCounter": 5074
+    "globalCounter": 50
   },
   {
     "topic": "string",
-    "counter": 0,
-    "globalCounter": 16736
+    "counter": 10,
+    "globalCounter": 167
   },
   {
     "topic": "parsing",
-    "counter": 0,
-    "globalCounter": 4331
+    "counter": 20,
+    "globalCounter": 433
   },
   {
     "topic": "hibernate",
     "counter": 89,
-    "globalCounter": 5953
+    "globalCounter": 595
   },
   {
     "topic": "caching",
     "counter": 0,
-    "globalCounter": 2084
+    "globalCounter": 208
   },
   {
     "topic": "undefined",
@@ -42,7 +42,7 @@
   {
     "topic": "spring",
     "counter": 70,
-    "globalCounter": 15720
+    "globalCounter": 157
   },
   {
     "topic": "jsonobject",
@@ -57,17 +57,17 @@
   {
     "topic": "java",
     "counter": 0,
-    "globalCounter": 143299
+    "globalCounter": 143
   },
   {
     "topic": "json",
     "counter": 0,
-    "globalCounter": 36201
+    "globalCounter": 362
   },
   {
     "topic": "mongodb",
     "counter": 2,
-    "globalCounter": 13568
+    "globalCounter": 135
   },
   {
     "topic": "equality",
@@ -77,12 +77,12 @@
   {
     "topic": "hashmap",
     "counter": 0,
-    "globalCounter": 1430
+    "globalCounter": 14
   },
   {
     "topic": "jpa-2.0",
     "counter": 0,
-    "globalCounter": 105
+    "globalCounter": 15
   },
   {
     "topic": "resttemplate",
@@ -92,37 +92,37 @@
   {
     "topic": "java.util.scanner",
     "counter": 0,
-    "globalCounter": 536
+    "globalCounter": 53
   },
   {
     "topic": "rest",
-    "counter": 0,
-    "globalCounter": 7240
+    "counter": 110,
+    "globalCounter": 724
   },
   {
     "topic": "static",
-    "counter": 0,
-    "globalCounter": 1120
+    "counter": 23,
+    "globalCounter": 112
   },
   {
     "topic": "io",
-    "counter": 0,
-    "globalCounter": 1412
+    "counter": 34,
+    "globalCounter": 141
   },
   {
     "topic": "javascript",
-    "counter": 0,
-    "globalCounter": 227488
+    "counter": 60,
+    "globalCounter": 227
   },
   {
     "topic": "nosql",
     "counter": 1,
-    "globalCounter": 912
+    "globalCounter": 95
   },
   {
     "topic": "swing",
     "counter": 0,
-    "globalCounter": 4820
+    "globalCounter": 48
   },
   {
     "topic": "field",
@@ -132,6 +132,6 @@
   {
     "topic": "arrays",
     "counter": 0,
-    "globalCounter": 45955
+    "globalCounter": 459
   }
 ]

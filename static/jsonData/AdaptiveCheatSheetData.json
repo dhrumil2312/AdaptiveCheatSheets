@@ -1,0 +1,14 @@
+[
+  {
+    "author_id": 26,
+    "content": "<div>SUM </div><div>COUNT</div><div>&nbsp;&nbsp; SELECT COUNT(column_name) FROM table_name</div><div>AVG</div><div>&nbsp;&nbsp; SELECT AVG(column_name) AS new_name FROM table_name</div><div>MAX</div><div>MIN</div>",
+    "created_date": "2017-11-22T07:00:00Z",
+    "downvote": 0,
+    "note_id": 129,
+    "tag": "SQL",
+    "title": "SQL Math Functions",
+    "type": 0,
+    "upvote": 0,
+    "view_count": 0
+  }
+]
