@@ -17,12 +17,10 @@ mcsas.controller('NotesController', function ($scope, $http) {
             url: '/getnotesbytag/',
             method: 'GET'
         }).success(function (response) {
-            console.log("all user notes", response);
             userNotes = response;
             //Have to update the chart series data:
             for (var i = 0; i < userNotes.length; i++) {
                 $scope.notes.push(userNotes[i].fields);
-                console.log("all user notes in loop", userNotes[i].fields);
             }
         });
         console.log("all scope notes from server", $scope.notes);

@@ -11,7 +11,7 @@ from django.db import connection
 from django.views.generic.base import RedirectView
 import  json
 from django.db import  connection
-import requests
+#import requests
 from elasticsearch import Elasticsearch
 
 
