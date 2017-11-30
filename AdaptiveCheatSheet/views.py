@@ -25,6 +25,9 @@ def dashboard(request, username='null'):
         username = request.session['username']
         id = request.session['id']
 
+
+
+
     elif username == 'allUser':
         a = "select sum(upvote) upvote_sum  , sum(downvote) downvote_sum , sum(notes_shared) notes_shared_sum , sum(note_access) note_access_sum from \"AdaptiveCheatSheet_useractivity\""
         cursor = connection.cursor()
