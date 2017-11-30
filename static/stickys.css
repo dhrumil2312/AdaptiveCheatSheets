@@ -233,51 +233,80 @@ ul#notesContainer li:hover {
     -o-transform: scale(1.25);
     transform: scale(1.25);
 }
-
+ul#notesContainer a.shareNote,
 ul#notesContainer a.editNote,
+ul#notesContainer a.upvoteNote,
+ul#notesContainer a.downvoteNote,
 ul#notesContainer a.deleteNote {
-    position: absolute;
-    bottom: 0em;
-    font-size: 2em;
+    position: fixed;
+    top: 2.5em;
+    font-size: 1em;
     line-height: 1.61803398875em;
+    padding: 1em;
+}
+
+ul#notesContainer a.upvoteNote {
+     right: 7.25em;
+}
+ul#notesContainer a.downvoteNote {
+     right: 4.25em;
+}
+ul#notesContainer a.shareNote {
+     right: 2.25em;
 }
 
 ul#notesContainer a.editNote {
-    right: 1.75em;
+     right: 1.25em;
+}
+
+ul#notesContainer a.deleteNote {
+    right: 0.25em;
+}
+ul#notesContainer a.shareNote,
+ul#notesContainer a.editNote,
+ul#notesContainer a.upvoteNote,
+ul#notesContainer a.downvoteNote,
+ul#notesContainer a.deleteNote {
+    position: fixed;
+    top: 2.5em;
+    font-size: 1em;
+    line-height: 1.61803398875em;
+    padding: 1em;
+}
+
+ul#notesContainer a.upvoteNote {
+     right: 7.25em;
+}
+ul#notesContainer a.downvoteNote {
+     right: 4.25em;
+}
+ul#notesContainer a.shareNote {
+     right: 2.25em;
+}
+
+ul#notesContainer a.editNote {
+     right: 1.25em;
 }
 
 ul#notesContainer a.deleteNote {
     right: 0.25em;
 }
 
+ul#notesContainer li a.shareNote,
+ul#notesContainer li a.downvoteNote,
+ul#notesContainer li a.upvoteNote,
 ul#notesContainer li a.editNote,
 ul#notesContainer li a.deleteNote {
-    color: rgb(204, 204, 153);
+    color:#444;
 }
 
-ul#notesContainer li:nth-child(even) a.editNote,
-ul#notesContainer li:nth-child(even) a.deleteNote {
-    color: rgb(153, 204, 153);
-}
 
-ul#notesContainer li:nth-child(3n) a.editNote,
-ul#notesContainer li:nth-child(3n) a.deleteNote {
-    color: rgb(153, 153, 204);
-}
-
+ul#notesContainer li a.shareNote:hover,
+ul#notesContainer li a.downvoteNote:hover,
+ul#notesContainer li a.upvoteNote:hover,
 ul#notesContainer li a.editNote:hover,
 ul#notesContainer li a.deleteNote:hover {
-    color: rgb(153, 153, 114);
-}
-
-ul#notesContainer li:nth-child(even) a.editNote:hover,
-ul#notesContainer li:nth-child(even) a.deleteNote:hover {
-    color: rgb(114, 153, 114);
-}
-
-ul#notesContainer li:nth-child(3n) a.editNote:hover,
-ul#notesContainer li:nth-child(3n) a.deleteNote:hover {
-    color: rgb(114, 114, 85);
+    color: rgb(206, 67, 16);
 }
 
 ul#notesContainer li p.noteDate {
@@ -954,3 +983,4 @@ hr.style18:before {
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
+
