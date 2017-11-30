@@ -9,7 +9,7 @@ var mcsas = angular.module('mcsas', []);
 
 mcsas.controller('NotesController', function ($scope, $http) {
 
-    $scope.upvotednotes = [];
+    $scope.javanotes = [];
     $scope.trendingnotes = [];
     $scope.likenotes = [];
     $scope.recentnotes = [];
