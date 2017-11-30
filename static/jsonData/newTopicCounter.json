@@ -1,0 +1,137 @@
+[
+  {
+    "topic": "HTML",
+    "counter": 15,
+    "globalCounter": 22
+  },
+  {
+    "topic": "SQL",
+    "counter": 20,
+    "globalCounter": 216
+  },
+  {
+    "topic": "UNIX",
+    "counter": 20,
+    "globalCounter": 50
+  },
+  {
+    "topic": "LOOPS",
+    "counter": 30,
+    "globalCounter": 167
+  },
+  {
+    "topic": "JAVASCRIPT",
+    "counter": 40,
+    "globalCounter": 433
+  },
+  {
+    "topic": "XML",
+    "counter": 69,
+    "globalCounter": 595
+  },
+  {
+    "topic": "D3.JS",
+    "counter": 10,
+    "globalCounter": 208
+  },
+  {
+    "topic": "NORMAL DISTRIBUTION",
+    "counter": 90,
+    "globalCounter": 471
+  },
+  {
+    "topic": "ARRAYS",
+    "counter": 40,
+    "globalCounter": 157
+  },
+  {
+    "topic": "CSS",
+    "counter": 30,
+    "globalCounter": 96
+  },
+  {
+    "topic": "CODE",
+    "counter": 0,
+    "globalCounter": 169
+  },
+  {
+    "topic": "JAVA",
+    "counter": 90,
+    "globalCounter": 143
+  },
+  {
+    "topic": "JSON",
+    "counter": 10,
+    "globalCounter": 362
+  },
+  {
+    "topic": "SQL;LIKE/IN",
+    "counter": 12,
+    "globalCounter": 135
+  },
+  {
+    "topic": "SELECT",
+    "counter": 10,
+    "globalCounter": 207
+  },
+  {
+    "topic": "HASHMAP",
+    "counter": 20,
+    "globalCounter": 14
+  },
+  {
+    "topic": "REST",
+    "counter": 10,
+    "globalCounter": 15
+  },
+  {
+    "topic": "SOAP",
+    "counter": 17,
+    "globalCounter": 176
+  },
+  {
+    "topic": "java.util.scanner",
+    "counter": 10,
+    "globalCounter": 53
+  },
+  {
+    "topic": "NULLPOINTER",
+    "counter": 10,
+    "globalCounter": 724
+  },
+  {
+    "topic": "STATIC",
+    "counter": 23,
+    "globalCounter": 112
+  },
+  {
+    "topic": "IO",
+    "counter": 24,
+    "globalCounter": 141
+  },
+  {
+    "topic": "DATABASE",
+    "counter": 30,
+    "globalCounter": 227
+  },
+  {
+    "topic": "NOSQL",
+    "counter": 10,
+    "globalCounter": 95
+  },
+  {
+    "topic": "SWING",
+    "counter": 20,
+    "globalCounter": 48
+  },
+  {
+    "topic": "FIELD",
+    "counter": 1,
+    "globalCounter": 334
+  },
+  {
+    "topic": "ARRAYS",
+    "counter": 20,
+    "globalCounter": 459
+  }
+]
