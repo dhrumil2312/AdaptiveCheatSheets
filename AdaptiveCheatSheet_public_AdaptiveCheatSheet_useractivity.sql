@@ -1,0 +1,12 @@
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (26, 1, 566, 1, 1, 1, 23, 'QWE');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (27, 1, 567, 1, 1, 1, 23, 'SQL');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (31, 1, 564, 1, 1, 1, 23, 'SQL');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (25, 1, 565, 1, 0, 0, 51, 'QWE');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (28, 1, 568, 1, 0, 0, 51, 'LOOP;');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (29, 1, 2, 1, 0, 0, 51, 'CODE;');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (30, 1, 3, 1, 0, 0, 51, 'CODE;');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (32, 1, 532, 1, 1, 1, 10, 'LKNFV');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (33, 1, 532, 1, 1, 1, 10, 'IC');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (34, 1, 562, 1, 1, 1, 10, 'HTML');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (35, 1, 563, 1, 1, 1, 10, 'SQL');
+INSERT INTO public.AdaptiveCheatSheet_useractivity (id, user_id, note_id, upvote, downvote, notes_shared, note_access, tags) VALUES (36, 1, 532, 1, 1, 1, 10, 'LOOP;');
