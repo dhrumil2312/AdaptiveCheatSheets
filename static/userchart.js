@@ -58,7 +58,6 @@ myapp.controller('AllActivityController', function ($scope, $http) {
             console.log(seriesArray, "new series array users ");
             seriesArray.data = allUserData;
         });
-
     };
 
     $scope.chartSeries = [
@@ -69,7 +68,6 @@ myapp.controller('AllActivityController', function ($scope, $http) {
             id: 'User Activity Counter'
 
         },
-
 
         {
             "name": "Social Users Activities",
@@ -237,9 +235,7 @@ myapp.controller('AllActivityController', function ($scope, $http) {
 
 myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
-
     var username = "current user";
-
 
     //To load the data of the logged in user.
     $scope.initForLoginActivity = function () {
@@ -262,35 +258,6 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
             });
 
-
-        //To load the data of the all users.
-        /*
-                $http({
-                    url: 'http://localhost:8989/userProfile/allUser/2017/loginCounter/',
-                    dataType: 'json',
-                    method: 'GET',
-                    data: '',
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                }).success(function (response) {
-                    service = response;
-
-                    console.log(service);
-
-                    var allUserData = [];
-                    //Have to update the chart series data:
-                    for (var i = 0; i < service.length; i++)
-                        allUserData.push(service[i].loginCounter);
-
-                    var seriesArray = $scope.chartSeries[1];
-                    console.log(seriesArray, "new series array users ");
-                    seriesArray.data = allUserData;
-
-
-                });*/
-
-
         $http.get('../static/jsonData/loginAllUserData.json')
             .then(function (jsonData) {
 
@@ -307,7 +274,6 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
                 seriesArray.data = allUserData;
             });
     };
-
 
     $scope.chartTypes = [
         {"id": "line", "title": "Line"},
@@ -353,7 +319,6 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
 
         var newUser = $scope.newUser;
-
 
         $http.get('../static/jsonData/newLoginUserCounter.json')
             .then(function (jsonData) {

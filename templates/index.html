@@ -187,7 +187,7 @@
         <h2>Most Trending notes</h2>
         <div>
             <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in upvotednotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+            <li ng-repeat="note in trendingnotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
                 <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
                 <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
                 <h1 ng-bind="note.title"></h1>
@@ -203,7 +203,7 @@
         <h2>Notes that you may like</h2>
         <div>
            <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+            <li ng-repeat="note in likenotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
                 <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
                 <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
                 <h1 ng-bind="note.title"></h1>
@@ -219,7 +219,7 @@
         <h2>Most recent notes</h2>
         <div>
              <ul class="clearfix" id="notesContainer">
-            <li ng-repeat="note in notes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
+            <li ng-repeat="note in recentnotes" class="aNote" id="{{ note.note_id }}" my-post-repeat-directive>
                 <p><a class="editNote icon-edit" title="edit" ng-click="showEditNoteForm(note)"></a></p>
                 <p><a class="deleteNote icon-trash" title="delete" ng-click="animateDeleteNote(note.note_id)"></a></p>
                 <h1 ng-bind="note.title"></h1>
