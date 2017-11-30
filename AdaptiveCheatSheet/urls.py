@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^getnotes/', views.get_notes ),
     url(r'^getnotesbytag/', views.get_notes_bytag),
     url(r'^useractivity/', views.user_activity),
+url(r'^/userProfile/counter', views.dashboard),
     url(r'^api/autocomplete/' , views.elastic),
 
 ]

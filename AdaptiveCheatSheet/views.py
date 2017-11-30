@@ -15,7 +15,7 @@ import requests
 from elasticsearch import Elasticsearch
 
 
-def useractivity(request):
+def dashboard(request):
     username = request.session['username']
     id = request.session['id']
 
