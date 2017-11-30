@@ -5,15 +5,15 @@ var myapp = angular.module('myapp', ["highcharts-ng"]);
 myapp.controller('AllActivityController', function ($scope, $http, $window) {
 
     $scope.initForActivity = function () {
-        $http.defaults.useXDomain = true;
-        delete $http.defaults.headers.common['X-Requested-With'];
+        // $http.defaults.useXDomain = true;
+        // delete $http.defaults.headers.common['X-Requested-With'];
         var service = [];
         $http({
-            url: 'http://localhost:8989/userProfile/counter/',
+            url: '/userProfile/counter',
             method: 'GET'
         }).success(function (response) {
             service = response;
-            console.log(service);
+            console.log("userprofile counter server", service);
 
             var userData = [];
             //Have to update the chart series data:
@@ -27,13 +27,8 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
         //Call for All user
 
         $http({
-            url: 'http://localhost:8989/userProfile/allUser/counter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
+            url: '/userProfile/allUser/counter/',
+            method: 'GET'
         }).success(function (response) {
             service = response;
 
