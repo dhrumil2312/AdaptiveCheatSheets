@@ -9,72 +9,34 @@ var mcsas = angular.module('mcsas', []);
 
 mcsas.controller('NotesController', function ($scope, $http) {
 
-    $scope.javanotes = [];
-    $scope.trendingnotes = [];
-    $scope.likenotes = [];
-    $scope.recentnotes = [];
+    $scope.javascriptnotes = [];
+    $scope.sqlnotes = [];
 
-    $scope.notes = [];
     $scope.initForActivity = function () {
-        //Get all notes for user
-        var userNotes = [];
-        $http({
-            url: '/getnotesbytag/',
-            method: 'GET'
-        }).success(function (response) {
-            userNotes = response;
-            //Have to update the chart series data:
-            for (var i = 0; i < userNotes.length; i++) {
-                $scope.notes.push(userNotes[i].fields);
-            }
-        });
-        console.log("all scope notes from server", $scope.notes);
 
-
-        $http.get('../static/jsonData/mostupvotednotes.json')
+        $http.get('../static/jsonData/javascript.json')
             .then(function (jsonData) {
                 var service = jsonData.data;
                 console.log(service, "upvoted notes");
                 //Have to update the chart series data:
                 for (var i = 0; i < service.length; i++) {
-                    $scope.upvotednotes.push(service[i]);
+                    $scope.javascriptnotes.push(service[i]);
                 }
             });
 
-        $http.get('../static/jsonData/trendingNotes.json')
+        $http.get('../static/jsonData/sqlnotes.json')
             .then(function (jsonData) {
                 var service = jsonData.data;
                 console.log(service, "trendingnotes ");
                 //Have to update the chart series data:
                 for (var i = 0; i < service.length; i++) {
-                    $scope.trendingnotes.push(service[i]);
+                    $scope.sqlnotes.push(service[i]);
                 }
             });
-
-        $http.get('../static/jsonData/likeNotes.json')
-            .then(function (jsonData) {
-                var service = jsonData.data;
-                console.log(service, "likenotes notes");
-                //Have to update the chart series data:
-                for (var i = 0; i < service.length; i++) {
-                    $scope.likenotes.push(service[i]);
-                }
-            });
-
-        $http.get('../static/jsonData/recentNotes.json')
-            .then(function (jsonData) {
-                var service = jsonData.data;
-                console.log(service, "recentnotes notes");
-                //Have to update the chart series data:
-                for (var i = 0; i < service.length; i++) {
-                    $scope.recentnotes.push(service[i]);
-                }
-            });
-
 
     };
 
-    console.log($scope.recentnotes, "new updated recent notes");
+    console.log($scope.javascriptnotes, "new updated recent notes");
 
 
     $scope.initForActivity();
