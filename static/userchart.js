@@ -136,18 +136,10 @@ myapp.controller('AllActivityController', function ($scope, $http, $window) {
         });
     };
 
-    $scope.removeRandomSeries = function () {
-        var seriesArray = $scope.chartConfig.series;
-        var rndIdx = Math.floor(Math.random() * seriesArray.length);
-        seriesArray.splice(rndIdx, 1);
-    };
-
-
     $scope.removeSeries = function (id) {
         var seriesArray = $scope.chartConfig.series;
         seriesArray.splice(id, 1);
     };
-
 
     $scope.toggleHighCharts = function () {
         this.chartConfig.useHighStocks = !this.chartConfig.useHighStocks;
@@ -246,63 +238,69 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
     //To load the data of the logged in user.
     $scope.initForLoginActivity = function () {
-        $http.defaults.useXDomain = true;
-        delete $http.defaults.headers.common['X-Requested-With'];
         var service = [];
 
-        $http({
-            url: 'http://localhost:8989/userProfile/' + username + "/2017" + '/loginCounter',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            service = response;
+        $http.get('../static/jsonData/loginUserData.json')
+            .then(function (jsonData) {
 
-            console.log(service);
+                service = jsonData.data;
+                console.log("", service);
 
-            var userData = [];
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                userData.push(service[i].loginCounter);
+                var userData = [];
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++)
+                    userData.push(service[i].loginCounter);
 
 
-            var seriesArray = $scope.chartSeries[0];
-            seriesArray.data = userData;
+                var seriesArray = $scope.chartSeries[0];
+                seriesArray.data = userData;
 
+            });
 
-        });
 
         //To load the data of the all users.
+        /*
+                $http({
+                    url: 'http://localhost:8989/userProfile/allUser/2017/loginCounter/',
+                    dataType: 'json',
+                    method: 'GET',
+                    data: '',
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).success(function (response) {
+                    service = response;
 
-        $http({
-            url: 'http://localhost:8989/userProfile/allUser/2017/loginCounter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            service = response;
+                    console.log(service);
 
-            console.log(service);
+                    var allUserData = [];
+                    //Have to update the chart series data:
+                    for (var i = 0; i < service.length; i++)
+                        allUserData.push(service[i].loginCounter);
 
-            var allUserData = [];
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++)
-                allUserData.push(service[i].loginCounter);
-
-            var seriesArray = $scope.chartSeries[1];
-            console.log(seriesArray, "new series array users ");
-            seriesArray.data = allUserData;
-
-
-        });
+                    var seriesArray = $scope.chartSeries[1];
+                    console.log(seriesArray, "new series array users ");
+                    seriesArray.data = allUserData;
 
 
+                });*/
+
+
+        $http.get('../static/jsonData/loginAllUserData.json')
+            .then(function (jsonData) {
+
+                service = jsonData.data;
+                console.log("all user activity", service);
+
+                var allUserData = [];
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++)
+                    allUserData.push(service[i].loginCounter);
+
+                var seriesArray = $scope.chartSeries[1];
+                console.log(seriesArray, "new series array users ");
+                seriesArray.data = allUserData;
+            });
     };
 
 
@@ -344,7 +342,6 @@ myapp.controller('LoginActivityController', function ($scope, $http, $window) {
 
 
     var seriesId = 0;
-
 
     //Adding the series of new user
     $scope.addSeries = function () {
@@ -529,70 +526,53 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
         delete $http.defaults.headers.common['X-Requested-With'];
         var service = [];
 
-        $http({
-            url: 'http://localhost:8989/userProfile/' + username + '/topicCounter',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            service = response;
 
-            console.log(service);
+        $http.get('../static/jsonData/topicCounter.json')
+            .then(function (jsonData) {
 
-            var userData = [];
-            var topics = [];
+                service = jsonData.data;
 
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                userData.push(service[i].counter);
-                topics.push(service[i].topic);
-            }
+                console.log("topic counter json", service);
 
-            var seriesArray = $scope.chartSeries[0];
-            var categories = $scope.chartConfig;
+                var userData = [];
+                var topics = [];
 
-            console.log(seriesArray, categories, "particular user topic counter  ");
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    userData.push(service[i].counter);
+                    topics.push(service[i].topic);
+                }
 
-            seriesArray.data = userData;
+                var seriesArray = $scope.chartSeries[0];
+                var categories = $scope.chartConfig;
 
+                console.log(seriesArray, categories, "particular user topic counter  ");
 
-        });
+                seriesArray.data = userData;
 
+            });
 
-        $http({
-            url: 'http://localhost:8989/userProfile/allUser/topicCounter/',
-            dataType: 'json',
-            method: 'GET',
-            data: '',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).success(function (response) {
-            service = response;
+        $http.get('../static/jsonData/topicCounter.json')
+            .then(function (jsonData) {
 
-            console.log(service);
+                service = jsonData.data;
+                console.log(service);
 
-            var allUserData = [];
-            var topics = [];
-            //Have to update the chart series data:
-            for (var i = 0; i < service.length; i++) {
-                allUserData.push(service[i].counter);
-                topics.push(service[i].topic);
-            }
+                var allUserData = [];
+                var topics = [];
+                //Have to update the chart series data:
+                for (var i = 0; i < service.length; i++) {
+                    allUserData.push(service[i].globalCounter);
+                    topics.push(service[i].topic);
+                }
 
-            var seriesArray = $scope.chartSeries[1];
-            var categories = $scope.chartConfig.xAxis;
-            console.log(seriesArray, categories, "all user topic counter  ");
-            seriesArray.data = allUserData;
-            $scope.chartConfig.xAxis.categories = topics;
+                var seriesArray = $scope.chartSeries[1];
+                var categories = $scope.chartConfig.xAxis;
+                console.log(seriesArray, categories, "all user topic counter  ");
+                seriesArray.data = allUserData;
+                $scope.chartConfig.xAxis.categories = topics;
 
-
-        });
-
-
+            });
     };
 
 
@@ -749,17 +729,6 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 
         },
 
-        /* legend: {
-             layout: 'vertical',
-             align: 'left',
-             x: 120,
-             verticalAlign: 'top',
-             y: 100,
-             floating: true,
-             backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-         },*/
-
-
         series: $scope.chartSeries,
         title: {
             text: 'Explored Topic Activity Chart'
@@ -773,6 +742,7 @@ myapp.controller('ExploredTopicActivityController', function ($scope, $http, $wi
 
 });
 
+/*
 
 myapp.controller('PercentageTopicController', function ($scope, $http, $window) {
 
@@ -913,7 +883,7 @@ myapp.controller('PercentageTopicController', function ($scope, $http, $window) 
             }
         }).success(function (response) {
             var service = response;
-            console.log(service, " add series call response : ",newUser);
+            console.log(service, " add series call response : ", newUser);
 
             var userData = [];
             //Have to update the chart series data:
@@ -924,7 +894,7 @@ myapp.controller('PercentageTopicController', function ($scope, $http, $window) 
                 userData.push(percentage);
             }
 
-            console.log("user data of "+newUser,userData);
+            console.log("user data of " + newUser, userData);
             var sId = 'series of' + "" + username + seriesId++;
             $scope.chartConfig.series.push({
                 data: userData,
@@ -933,12 +903,6 @@ myapp.controller('PercentageTopicController', function ($scope, $http, $window) 
             });
         });
 
-    };
-
-    $scope.removeRandomSeries = function () {
-        var seriesArray = $scope.chartConfig.series;
-        var rndIdx = Math.floor(Math.random() * seriesArray.length);
-        seriesArray.splice(rndIdx, 1);
     };
 
     $scope.removeSeries = function (id) {
@@ -1029,3 +993,4 @@ myapp.controller('PercentageTopicController', function ($scope, $http, $window) 
 
 });
 
+*/

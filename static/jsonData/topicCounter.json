@@ -1,0 +1,137 @@
+[
+  {
+    "topic": "stackexchange-api",
+    "counter": 0,
+    "globalCounter": 22
+  },
+  {
+    "topic": "layout-manager",
+    "counter": 40,
+    "globalCounter": 216
+  },
+  {
+    "topic": "spring-mvc",
+    "counter": 0,
+    "globalCounter": 50
+  },
+  {
+    "topic": "string",
+    "counter": 10,
+    "globalCounter": 167
+  },
+  {
+    "topic": "parsing",
+    "counter": 20,
+    "globalCounter": 433
+  },
+  {
+    "topic": "hibernate",
+    "counter": 89,
+    "globalCounter": 595
+  },
+  {
+    "topic": "caching",
+    "counter": 0,
+    "globalCounter": 208
+  },
+  {
+    "topic": "undefined",
+    "counter": 0,
+    "globalCounter": 471
+  },
+  {
+    "topic": "spring",
+    "counter": 70,
+    "globalCounter": 157
+  },
+  {
+    "topic": "jsonobject",
+    "counter": 0,
+    "globalCounter": 96
+  },
+  {
+    "topic": "ehcache",
+    "counter": 0,
+    "globalCounter": 169
+  },
+  {
+    "topic": "java",
+    "counter": 0,
+    "globalCounter": 143
+  },
+  {
+    "topic": "json",
+    "counter": 0,
+    "globalCounter": 362
+  },
+  {
+    "topic": "mongodb",
+    "counter": 2,
+    "globalCounter": 135
+  },
+  {
+    "topic": "equality",
+    "counter": 0,
+    "globalCounter": 207
+  },
+  {
+    "topic": "hashmap",
+    "counter": 0,
+    "globalCounter": 14
+  },
+  {
+    "topic": "jpa-2.0",
+    "counter": 0,
+    "globalCounter": 15
+  },
+  {
+    "topic": "resttemplate",
+    "counter": 107,
+    "globalCounter": 176
+  },
+  {
+    "topic": "java.util.scanner",
+    "counter": 0,
+    "globalCounter": 53
+  },
+  {
+    "topic": "rest",
+    "counter": 110,
+    "globalCounter": 724
+  },
+  {
+    "topic": "static",
+    "counter": 23,
+    "globalCounter": 112
+  },
+  {
+    "topic": "io",
+    "counter": 34,
+    "globalCounter": 141
+  },
+  {
+    "topic": "javascript",
+    "counter": 60,
+    "globalCounter": 227
+  },
+  {
+    "topic": "nosql",
+    "counter": 1,
+    "globalCounter": 95
+  },
+  {
+    "topic": "swing",
+    "counter": 0,
+    "globalCounter": 48
+  },
+  {
+    "topic": "field",
+    "counter": 1,
+    "globalCounter": 334
+  },
+  {
+    "topic": "arrays",
+    "counter": 0,
+    "globalCounter": 459
+  }
+]
