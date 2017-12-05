@@ -6,7 +6,7 @@
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
           rel="stylesheet"/>
 
-    <link href= "{% static 'highcharts-ng.css' %}" rel="stylesheet"/>
+    <link href="{% static 'highcharts-ng.css' %}" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://code.highcharts.com/stock/highstock.src.js"></script>
@@ -15,7 +15,6 @@
 </head>
 <body>
 <h2>User Activity Graph</h2>
-
 
 
 <div ng-app="myapp">
@@ -152,49 +151,6 @@
             </div>
         </div>
     </div>
-
-{#    <div ng-controller="PercentageTopicController" ng-init="initForLoginActivity()">#}
-{#        <div class="row-fluid">#}
-{#            <div class="span12">#}
-{#                <div class="row">#}
-{#                    <highchart id="chart2" config="chartConfig" class="span12"></highchart>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="span2 well" id="mainblock4">#}
-{#                <div class="row-fluid">#}
-{#                    <input type="text" placeholder="New Username" ng-model="newUser"/>#}
-{#                    <button ng-click="addSeries()">Add Graph of User</button>#}
-{#                </div>#}
-{#                <div class="row-fluid">Default Type <select ng-model="chartConfig.chart.type"#}
-{#                                                            ng-options="t.id as t.title for t in chartTypes"></select>#}
-{#                </div>#}
-{#                <div class="row-fluid">Stack <select ng-model="chartConfig.plotOptions.series.stacking"#}
-{#                                                     ng-options="t.id as t.title for t in chartStack"></select></div>#}
-{##}
-{#            </div>#}
-{##}
-{#            <div ng-repeat="ser in chartSeries">#}
-{#                <div class="span1"></div>#}
-{#                <div class="span4">#}
-{#                    <div class="span7 well" id="responsive4">#}
-{##}
-{#                        <div class="row-fluid"><h4> {{ ser.name }}</h4></div>#}
-{#                        <div class="row-fluid">Type <select ng-model="ser.type"#}
-{#                                                            ng-options="t.id as t.title for t in chartTypes"></select>#}
-{#                        </div>#}
-{#                        <div class="row-fluid">Dash Style <select ng-model="ser.dashStyle"#}
-{#                                                                  ng-options="ds.id as ds.title for ds in dashStyles"></select>#}
-{#                        </div>#}
-{#                        <div class="row-fluid">#}
-{#                            <button ng-click="removeSeries($index)">Delete</button>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-
 
 </div>
 
