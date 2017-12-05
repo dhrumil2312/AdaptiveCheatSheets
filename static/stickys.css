@@ -233,6 +233,7 @@ ul#notesContainer li:hover {
     -o-transform: scale(1.25);
     transform: scale(1.25);
 }
+
 ul#notesContainer a.shareNote,
 ul#notesContainer a.editNote,
 ul#notesContainer a.upvoteNote,
@@ -246,22 +247,25 @@ ul#notesContainer a.deleteNote {
 }
 
 ul#notesContainer a.upvoteNote {
-     right: 7.25em;
+    right: 7.25em;
 }
+
 ul#notesContainer a.downvoteNote {
-     right: 4.25em;
+    right: 4.25em;
 }
+
 ul#notesContainer a.shareNote {
-     right: 2.25em;
+    right: 2.25em;
 }
 
 ul#notesContainer a.editNote {
-     right: 1.25em;
+    right: 1.25em;
 }
 
 ul#notesContainer a.deleteNote {
     right: 0.25em;
 }
+
 ul#notesContainer a.shareNote,
 ul#notesContainer a.editNote,
 ul#notesContainer a.upvoteNote,
@@ -275,17 +279,19 @@ ul#notesContainer a.deleteNote {
 }
 
 ul#notesContainer a.upvoteNote {
-     right: 7.25em;
+    right: 7.25em;
 }
+
 ul#notesContainer a.downvoteNote {
-     right: 4.25em;
+    right: 4.25em;
 }
+
 ul#notesContainer a.shareNote {
-     right: 2.25em;
+    right: 2.25em;
 }
 
 ul#notesContainer a.editNote {
-     right: 1.25em;
+    right: 1.25em;
 }
 
 ul#notesContainer a.deleteNote {
@@ -297,9 +303,8 @@ ul#notesContainer li a.downvoteNote,
 ul#notesContainer li a.upvoteNote,
 ul#notesContainer li a.editNote,
 ul#notesContainer li a.deleteNote {
-    color:#444;
+    color: #444;
 }
-
 
 ul#notesContainer li a.shareNote:hover,
 ul#notesContainer li a.downvoteNote:hover,
@@ -318,13 +323,13 @@ ul#notesContainer li p.noteDate {
 }
 
 /*ul#notesContainer li p {*/
-    /*max-width: 350px;*/
-    /*display: inline-block;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-    /*white-space: nowrap;*/
-    /*line-height: 15px;*/
-    /*!*position: relative;*!*/
+/*max-width: 350px;*/
+/*display: inline-block;*/
+/*overflow: hidden;*/
+/*text-overflow: ellipsis;*/
+/*white-space: nowrap;*/
+/*line-height: 15px;*/
+/*!*position: relative;*!*/
 /*}*/
 
 .tooltip {
@@ -967,20 +972,21 @@ p.closeHelpIconWrapper a:active {
 }
 
 hr.style18 {
-  height: 30px;
-  border-style: solid;
-  border-color: #8c8b8b;
-  border-width: 1px 0 0 0;
-  border-radius: 20px;
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
 }
+
 hr.style18:before {
-  display: block;
-  content: "";
-  height: 30px;
-  margin-top: -31px;
-  border-style: solid;
-  border-color: #8c8b8b;
-  border-width: 0 0 1px 0;
-  border-radius: 20px;
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
